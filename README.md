@@ -1,5 +1,3 @@
-> :warning: This project has moved to https://github.com/vertigis/vertigis-mobile-samples
-
 # VertiGIS Studio Mobile SDK Samples
 
 ![CI](https://github.com/geocortex/vertigis-mobile-samples/workflows/CI/badge.svg)
