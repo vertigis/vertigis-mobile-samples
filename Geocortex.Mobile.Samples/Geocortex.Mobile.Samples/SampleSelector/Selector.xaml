@@ -10,7 +10,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <theme:GenericAppStyles/>
+                <theme:AppSelectorStyles/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -28,7 +28,7 @@
                 <DataTemplate>
                     <Frame CornerRadius="5"
                            Padding="0"
-                           BackgroundColor="{StaticResource GenericApp_PrimaryColor}"
+                           BackgroundColor="{StaticResource AppSelector_PrimaryColor}"
                            Margin="15"
                            HasShadow="False">
                         <Label Text="{Binding Name}"
