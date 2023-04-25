@@ -90,12 +90,12 @@ namespace VertiGIS.Mobile.Samples
             if (layout == null)
             {
                 // If we don't have a layout, assume it's available in the app.
-                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAysnc(app);
+                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAsync(app);
             }
             else
             {
                 // Load the main VertiGIS Studio Mobile app page.
-                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAysnc(app, layout);
+                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAsync(app, layout);
             }
 
             LoadResult.Page.Title = "Demo";
