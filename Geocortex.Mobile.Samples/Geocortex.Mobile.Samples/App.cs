@@ -11,25 +11,22 @@ using Xamarin.Forms;
 
 namespace VertiGIS.Mobile.Samples
 {
-    public class App : VertiGIS.Mobile.App
+    public class App : Application
     {
         public static App SamplesInstance;
         public LoadAppResult LoadResult;
 
-        public App()
-            : base()
+        public App() : base()
         {
-            // Add the styles from this page to the application - overrides styles from VertiGIS.Mobile
-            var res = new Styles().Resources;
-            this.Resources.MergedDictionaries.Add(res);
+            AppManager.Initialize(this);
 
-            Current.MainPage = new ContentPage()
+            MainPage = new ContentPage()
             {
                 Content = GetContent()
             };
 
             // Register additional assemblies to search for configured assembly attributes.
-            AssemblyManager.RegisterAssemblies(this.GetType().Assembly);
+            AppManager.Instance.AssemblyManager.RegisterAssemblies(this.GetType().Assembly);
 
             SamplesInstance = this;
         }
@@ -37,15 +34,41 @@ namespace VertiGIS.Mobile.Samples
         protected override async void OnStart()
         {
             // Initialize VertiGIS Studio Mobile
-            await InitializeAsync();
+            await AppManager.Instance.InitializeAsync();
 
             // Get our sample selection page and set it as the root.
             var selectorPage = new SampleSelector.Selector(this);
 
-            Instance.MainPage = new NavigationPage(selectorPage)
+            MainPage = new NavigationPage(selectorPage)
             {
                 Title = "VertiGIS Studio Mobile SDK Samples",
             };
+        }
+
+
+        /*
+        OnSleep() and OnResume() don't seem to get called by Xamarin so we're providing the same functionality explicitly for iOS, Android.
+        */
+
+        // <inheritdoc/>
+        protected override void OnSleep()
+        {
+            AppManager.Instance.OnBackgrounded();
+
+            base.OnSleep();
+        }
+
+        // <inheritdoc/>
+        protected override void OnResume()
+        {
+            // OnResume will get called when background processing begins.
+            // UWP activated events are raised in UWP App.xaml.cs.
+            if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            {
+                AppManager.Instance.OnActivated();
+            }
+
+            base.OnResume();
         }
 
         public async Task LoadApp(Sample sample)
@@ -53,7 +76,7 @@ namespace VertiGIS.Mobile.Samples
             // Push a loading spinner.
             if (Device.RuntimePlatform != Device.iOS)
             {
-                await VertiGIS.Mobile.App.Instance.MainPage.Navigation.PushModalAsync(new ContentPage()
+                await MainPage.Navigation.PushModalAsync(new ContentPage()
                 {
                     Content = GetContent()
                 });
@@ -67,12 +90,12 @@ namespace VertiGIS.Mobile.Samples
             if (layout == null)
             {
                 // If we don't have a layout, assume it's available in the app.
-                LoadResult = await Bootstrapper.LoadAppAysnc(app);
+                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAsync(app);
             }
             else
             {
                 // Load the main VertiGIS Studio Mobile app page.
-                LoadResult = await Bootstrapper.LoadAppAysnc(app, layout);
+                LoadResult = await AppManager.Instance.Bootstrapper.LoadAppAsync(app, layout);
             }
 
             LoadResult.Page.Title = "Demo";
@@ -103,11 +126,11 @@ namespace VertiGIS.Mobile.Samples
                 var button = new Button() { Text = "Return to Samples", BackgroundColor = Color.White, TextColor = Color.Black };
                 button.Clicked += async (s, e) =>
                 {
-                    await Instance.MainPage.Navigation.PopModalAsync();
+                    await MainPage.Navigation.PopModalAsync();
                 };
                 content.Children.Add(button, Constraint.Constant(10), Constraint.Constant(verticalPadding));
 
-                await Instance.MainPage.Navigation.PushModalAsync(tabbedPage, false);
+                await MainPage.Navigation.PushModalAsync(tabbedPage, false);
 
                 return;
             }
@@ -115,12 +138,12 @@ namespace VertiGIS.Mobile.Samples
             tabbedPage.Children.Add(LoadResult.Page);
             tabbedPage.Children.Add(new ContentPage { Content = description, Title = "Description", IconImageSource = "description.png" });
 
-            await Instance.MainPage.Navigation.PushAsync(tabbedPage, false);
+            await MainPage.Navigation.PushAsync(tabbedPage, false);
 
             // Pop the loading spinner.
             if (Device.RuntimePlatform != Device.iOS)
             {
-                await Instance.MainPage.Navigation.PopModalAsync();
+                await MainPage.Navigation.PopModalAsync();
             }
         }
 
@@ -191,11 +214,11 @@ namespace VertiGIS.Mobile.Samples
                 }
                 else
                 {
-                    LoadingAction -= ShowStatus;
+                    AppManager.LoadingAction -= ShowStatus;
                 }
             }
 
-            LoadingAction += ShowStatus;
+            AppManager.LoadingAction += ShowStatus;
 
             return stack;
         }

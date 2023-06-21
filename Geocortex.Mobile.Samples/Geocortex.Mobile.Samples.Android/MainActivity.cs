@@ -29,9 +29,9 @@ namespace VertiGIS.Mobile.Samples.Droid
             var app = new App();
 
             // Handle startup urls
-            HandleOnCreateIntent(app); // Startup urls
-            HandleFullyDrawn(app); // Android diagnostics
-            HandleAppPermissions(app); // Location, bluetooth, etc.
+            HandleOnCreateIntent(); // Startup urls
+            HandleFullyDrawn(); // Android diagnostics
+            HandleAppPermissions(); // Location, bluetooth, etc.
 
             LoadApplication(app);
         }

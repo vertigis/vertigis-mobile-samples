@@ -33,8 +33,8 @@ namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails
             var title = "Feature Title: " + (string.IsNullOrEmpty(firstFeature?.Title) ? "No feature title" : firstFeature.Title);
             await this.ActivateAsync();
 
-            _view.SetSource(source);
-            _view.SetTitle(title);
+            _view?.SetSource(source);
+            _view?.SetTitle(title);
         }
     }
 }
