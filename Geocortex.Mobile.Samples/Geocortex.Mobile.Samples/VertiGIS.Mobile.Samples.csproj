@@ -172,7 +172,7 @@
     <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms" Version="100.15.2" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.27.0-master.188" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.27.0.280" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
   </ItemGroup>
 
