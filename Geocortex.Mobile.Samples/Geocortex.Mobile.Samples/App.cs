@@ -108,32 +108,7 @@ namespace VertiGIS.Mobile.Samples
                 BarTextColor = Color.Black
             };
 
-            var description = GetDescription(readme);
-
-            // iOS apps with Navigation/TabbedPage/HorizontalTaskbar are being problematic.
-            // Use PushModalAsync instead of PushAsync and inject a button to return to samples.
-            if (Device.RuntimePlatform == Device.iOS && Device.Idiom == TargetIdiom.Phone)
-            {
-                var content = (LoadResult.Page as ContentPage).Content as RelativeLayout;
-                var verticalPadding = DependencyService.Get<VertiGIS.Mobile.Infrastructure.Platform.ISafeArea>().GetInsets().Top;
-                var appPage = new ContentPage() { Content = content, Title = "Demo", IconImageSource = "demo.png" };
-                var descriptionPage = new ContentPage { Content = description, Title = "Description", IconImageSource = "description.png", Padding = new Thickness(0, verticalPadding, 0, 0) };
-
-                tabbedPage.Children.Add(appPage);
-                tabbedPage.Children.Add(descriptionPage);
-
-                // Inject our `Return to Samples` button
-                var button = new Button() { Text = "Return to Samples", BackgroundColor = Color.White, TextColor = Color.Black };
-                button.Clicked += async (s, e) =>
-                {
-                    await MainPage.Navigation.PopModalAsync();
-                };
-                content.Children.Add(button, Constraint.Constant(10), Constraint.Constant(verticalPadding));
-
-                await MainPage.Navigation.PushModalAsync(tabbedPage, false);
-
-                return;
-            }
+            var description = GetDescription(readme);            
 
             tabbedPage.Children.Add(LoadResult.Page);
             tabbedPage.Children.Add(new ContentPage { Content = description, Title = "Description", IconImageSource = "description.png" });

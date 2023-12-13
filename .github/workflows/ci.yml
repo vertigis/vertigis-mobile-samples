@@ -15,6 +15,11 @@ jobs:
             - name: Setup msbuild
               uses: microsoft/setup-msbuild@v1
 
+            - uses: actions/setup-java@v2
+              with:
+                  distribution: 'microsoft'
+                  java-version: '11'
+
             - name: Restore NuGet packages
               run: msbuild -t:restore
               working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
