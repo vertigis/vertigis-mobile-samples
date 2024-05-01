@@ -29,15 +29,15 @@ jobs:
               run: msbuild
               working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
     iOS:
-        runs-on: macos-latest
+        runs-on: macos-12
         steps:
             - uses: actions/checkout@v2
 
             # Fixes error when using newer NuGet packages that require a minimum version of Xcode
-            - name: Use Xcode 14.3.1
+            - name: Use Latest Xcode
               uses: maxim-lobanov/setup-xamarin@v1
               with:
-                  xcode-version: 14.3.1
+                  xcode-version: latest
 
             # The following two workaround steps can be removed when the following github issue is resolved: https://github.com/actions/virtual-environments/issues/5768
             - name: Restore Workaround Remove
