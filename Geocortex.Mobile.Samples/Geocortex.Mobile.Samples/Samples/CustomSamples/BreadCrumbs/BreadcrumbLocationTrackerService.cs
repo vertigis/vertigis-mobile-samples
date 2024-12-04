@@ -8,6 +8,7 @@ using VertiGIS.Mobile.Composition.Services;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs;
 using System;
 using System.Threading.Tasks;
+using Microsoft.Maui.Devices.Sensors;
 
 [assembly: Service(typeof(BreadcrumbLocationTrackerService), PropertiesAutowired = true)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs

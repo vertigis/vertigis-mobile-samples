@@ -1,31 +1,14 @@
-﻿using Foundation;
-using UIKit;
-using VertiGIS.Mobile.Platform;
-using Xamarin.Forms;
+using Foundation;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
 
-namespace VertiGIS.Mobile.Samples.iOS
+namespace VertiGIS.Mobile.Samples.iOS;
+
+// TODO: Platform specific bootstrapping code should be migrated from AppDelegate.cs.original to AppDelegate.cs or MauiProgram.cs.
+// See iOS App Lifecycle: https://learn.microsoft.com/dotnet/maui/fundamentals/app-lifecycle#ios
+
+[Register(nameof(AppDelegate))]
+public class AppDelegate : MauiUIApplicationDelegate
 {
-    // The UIApplicationDelegate for the application. This class is responsible for launching the 
-    // User Interface of the application, as well as listening (and optionally responding) to 
-    // application events from iOS.
-    [Register("AppDelegate")]
-    public partial class AppDelegate : VertiGISAppDelegate
-    {
-        //
-        // This method is invoked when the application has loaded and is ready to run. In this 
-        // method you should instantiate the window, load the UI into it and then make the window
-        // visible.
-        //
-        // You have 17 seconds to return from this method, or iOS will terminate your application.
-        //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            IOSInitializer.Init();
-            Forms.Init();
-            var viewerApp = new App();
-            LoadApplication(viewerApp);
-
-            return base.FinishedLaunching(app, options);
-        }
-    }
+    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 }

@@ -5,8 +5,10 @@ using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Toolkit.Messaging;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Xamarin.Forms;
 using Newtonsoft.Json;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(OperationComponent), "operation", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation
@@ -23,7 +25,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation
             return new StackLayout
             {
                 Margin = 5,
-                BackgroundColor = Color.Black,
+                BackgroundColor = Colors.Black,
                 Children =
                 {
                     new Label

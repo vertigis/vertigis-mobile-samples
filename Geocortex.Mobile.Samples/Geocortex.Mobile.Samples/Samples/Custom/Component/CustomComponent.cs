@@ -2,7 +2,8 @@
 using VertiGIS.Mobile.Samples.Samples.Custom.Component;
 using VertiGIS.Mobile.Composition.Layout;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(CustomComponent), "component", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.Component

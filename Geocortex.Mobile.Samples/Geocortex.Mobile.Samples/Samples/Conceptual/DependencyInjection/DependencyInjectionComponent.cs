@@ -7,9 +7,11 @@ using VertiGIS.Mobile.Infrastructure.Maps;
 using System;
 using System.Text;
 using System.Xml.Linq;
-using Xamarin.Forms;
 using System.Reactive.Linq;
 using static System.FormattableString;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
+using Microsoft.Maui.ApplicationModel;
 
 [assembly: Component(typeof(DependencyInjectionComponent), "dependency-injection", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.DependencyInjection

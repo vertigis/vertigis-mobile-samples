@@ -1,21 +1,17 @@
-﻿<Application
-    x:Class="VertiGIS.Mobile.Samples.UWP.App"
+<?xml version="1.0" encoding="utf-8"?>
+<maui:MauiWinUIApplication
+    x:Class="Geocortex.Mobile.Samples.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    RequestedTheme="Light">
-    <Application.Resources>
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Geocortex.Mobile.Samples.UWP">
+    <maui:MauiWinUIApplication.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="VertiGIS.Mobile.UWP/Resources/VertiGISResources.xaml" />
-                <ResourceDictionary Source="VertiGIS.Mobile.Toolkit.UWP/Resources/ToolkitResources.xaml" />
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
-            <Style x:Key="DefaultButtonStyle" TargetType="Button">
-                <Setter Property="Background" Value="Blue"/>
-            </Style>
-            <!--Remove margin around the tabbed page control.-->
-            <Style TargetType="PivotItem">
-                <Setter Property="Margin" Value="0" />
-            </Style>
+            <!-- Other app resources here -->
         </ResourceDictionary>
-    </Application.Resources>
-</Application>
+    </maui:MauiWinUIApplication.Resources>
+</maui:MauiWinUIApplication>

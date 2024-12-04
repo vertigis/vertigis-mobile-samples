@@ -4,7 +4,8 @@ using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Toolkit.Logging;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(LoggingComponent), "logging", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.Logging

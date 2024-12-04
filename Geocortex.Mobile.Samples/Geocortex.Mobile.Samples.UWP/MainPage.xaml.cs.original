@@ -1,4 +1,5 @@
-﻿namespace VertiGIS.Mobile.Samples.UWP
+//TODO: Please move your logic out of 'MainPage.xaml.original' and 'MainPage.xaml.cs.original'.
+namespace VertiGIS.Mobile.Samples.UWP
 {
     /// <summary>
     /// The main entry point for the Windows App.

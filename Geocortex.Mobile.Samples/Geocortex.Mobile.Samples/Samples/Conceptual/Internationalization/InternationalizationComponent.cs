@@ -3,7 +3,8 @@ using VertiGIS.Mobile.Samples.Samples.Conceptual.Internationalization;
 
 using VertiGIS.Mobile.Composition.Layout;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(InternationalizationComponent), "i18n", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.Internationalization

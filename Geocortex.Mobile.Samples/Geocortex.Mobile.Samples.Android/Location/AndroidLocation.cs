@@ -3,6 +3,7 @@ using VertiGIS.Mobile.Samples.Location;
 using VertiGIS.Mobile.Samples.Droid.Location;
 using Android.Content;
 using Android.Locations;
+using Microsoft.Maui.Devices.Sensors;
 
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.

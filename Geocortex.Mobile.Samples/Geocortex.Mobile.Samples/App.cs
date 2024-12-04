@@ -7,7 +7,9 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using VertiGIS.Mobile.Toolkit.Views.Markdown;
-using Xamarin.Forms;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 namespace VertiGIS.Mobile.Samples
 {
@@ -63,7 +65,8 @@ namespace VertiGIS.Mobile.Samples
         {
             // OnResume will get called when background processing begins.
             // UWP activated events are raised in UWP App.xaml.cs.
-            if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
+                                    if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
             {
                 AppManager.Instance.OnActivated();
             }
@@ -74,7 +77,8 @@ namespace VertiGIS.Mobile.Samples
         public async Task LoadApp(Sample sample)
         {
             // Push a loading spinner.
-            if (Device.RuntimePlatform != Device.iOS)
+            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
+                        if (Device.RuntimePlatform != Device.iOS)
             {
                 await MainPage.Navigation.PushModalAsync(new ContentPage()
                 {
@@ -104,8 +108,8 @@ namespace VertiGIS.Mobile.Samples
             var tabbedPage = new TabbedPage()
             {
                 Title = sample.Name,
-                BarBackgroundColor = Color.LightGray,
-                BarTextColor = Color.Black
+                BarBackgroundColor = Colors.LightGray,
+                BarTextColor = Colors.Black
             };
 
             var description = GetDescription(readme);            
@@ -116,7 +120,8 @@ namespace VertiGIS.Mobile.Samples
             await MainPage.Navigation.PushAsync(tabbedPage, false);
 
             // Pop the loading spinner.
-            if (Device.RuntimePlatform != Device.iOS)
+            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
+                        if (Device.RuntimePlatform != Device.iOS)
             {
                 await MainPage.Navigation.PopModalAsync();
             }
@@ -138,14 +143,14 @@ namespace VertiGIS.Mobile.Samples
             var view = new MarkdownView()
             {
                 Markdown = readmeContent,
-                LabelStyleOverrides = new Style(typeof(Label)) { Setters = { new Setter { Property = Label.TextColorProperty, Value = Color.Black } } }
+                LabelStyleOverrides = new Style(typeof(Label)) { Setters = { new Setter { Property = Label.TextColorProperty, Value = Colors.Black } } }
             };
 
             var scrollContainer = new ScrollView() { Content = view.Content, HeightRequest = 1000, Margin = 5 };
 
             var stack = new StackLayout()
             {
-                BackgroundColor = Color.White,
+                BackgroundColor = Colors.White,
                 Children =
                 {
                     scrollContainer
@@ -177,7 +182,7 @@ namespace VertiGIS.Mobile.Samples
             // Label
             var label = new Label()
             {
-                TextColor = Color.Black
+                TextColor = Colors.Black
             };
             stack.Children.Add(label);
 

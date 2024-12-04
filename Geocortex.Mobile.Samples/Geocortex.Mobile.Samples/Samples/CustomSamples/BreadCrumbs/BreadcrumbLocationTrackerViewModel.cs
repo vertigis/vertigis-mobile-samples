@@ -7,7 +7,8 @@ using VertiGIS.Mobile.Toolkit.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: ViewModel(typeof(BreadcrumbLocationTrackerViewModel))]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs

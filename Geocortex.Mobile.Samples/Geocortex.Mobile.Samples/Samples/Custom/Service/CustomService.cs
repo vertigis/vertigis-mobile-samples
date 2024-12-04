@@ -3,7 +3,8 @@ using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Composition.Services;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Service(typeof(CustomService), PropertiesAutowired = true)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.Service

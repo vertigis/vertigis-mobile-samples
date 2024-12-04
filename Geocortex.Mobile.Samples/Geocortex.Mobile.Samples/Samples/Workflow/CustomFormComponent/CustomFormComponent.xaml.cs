@@ -1,5 +1,5 @@
 ﻿using VertiGIS.Mobile.Workflow.Core;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent
 {

@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Maui.Devices.Sensors;
 
 namespace VertiGIS.Mobile.Samples.Location
 {

@@ -2,6 +2,7 @@
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle;
+using Microsoft.Maui.ApplicationModel;
 
 [assembly: Export(typeof(BasemapOperations), SingleInstance = true)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle

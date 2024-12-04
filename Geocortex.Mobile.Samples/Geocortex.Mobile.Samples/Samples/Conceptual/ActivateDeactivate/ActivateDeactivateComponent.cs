@@ -3,7 +3,8 @@ using VertiGIS.Mobile.Samples.Samples.Conceptual.ActivateDeactivate;
 using VertiGIS.Mobile.Composition.Layout;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(ActivateDeactivateComponent), "activate-deactivate", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.ActivateDeactivate

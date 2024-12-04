@@ -3,7 +3,8 @@ using VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Toolkit.Views;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(GeocortexMobileElementsComponent), "geocortex-mobile-elements", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements

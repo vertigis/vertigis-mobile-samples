@@ -2,7 +2,8 @@
 using VertiGIS.Mobile.Samples;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly: Component(typeof(BreadcrumbLocationTrackerComponent), "breadcrumb-location-tracker", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs

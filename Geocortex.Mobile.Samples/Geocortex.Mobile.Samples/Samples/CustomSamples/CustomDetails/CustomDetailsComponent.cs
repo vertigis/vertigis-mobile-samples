@@ -6,7 +6,8 @@ using VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Xamarin.Forms;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
 
 [assembly:Component(typeof(CustomDetailsComponent), "custom-details", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails
