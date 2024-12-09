@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
-
-namespace VertiGIS.Mobile.Samples.SampleSelector
+﻿namespace VertiGIS.Mobile.Samples.SampleSelector
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Selector : ContentPage

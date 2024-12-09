@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.Maui.Devices.Sensors;
-
-namespace VertiGIS.Mobile.Samples.Location
+﻿namespace VertiGIS.Mobile.Samples.Location
 {
     public interface ILocation
     {

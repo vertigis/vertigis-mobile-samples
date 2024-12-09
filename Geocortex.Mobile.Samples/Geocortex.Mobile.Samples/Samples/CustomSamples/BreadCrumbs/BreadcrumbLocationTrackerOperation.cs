@@ -1,4 +1,4 @@
-﻿using Esri.ArcGISRuntime.Xamarin.Forms;
+﻿using Esri.ArcGISRuntime.Maui;
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs;

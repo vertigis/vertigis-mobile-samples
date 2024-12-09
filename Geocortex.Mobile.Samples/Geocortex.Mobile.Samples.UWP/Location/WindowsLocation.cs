@@ -2,12 +2,11 @@
 using VertiGIS.Mobile.Samples.Location;
 using VertiGIS.Mobile.Samples.UWP.Location;
 using Windows.Devices.Geolocation;
-using Microsoft.Maui.Devices.Sensors;
 
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.
  * This component is used to demonstrate platform specific implementations and api/method calls. */
-[assembly: Xamarin.Forms.Dependency(typeof(WindowsLocation))]
+[assembly: Microsoft.Maui.Controls.Dependency(typeof(WindowsLocation))]
 namespace VertiGIS.Mobile.Samples.UWP.Location
 {
     public class WindowsLocation : ILocation

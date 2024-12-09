@@ -1,10 +1,7 @@
-﻿using Esri.ArcGISRuntime.Xamarin.Forms;
+﻿using Esri.ArcGISRuntime.Maui;
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle;
-using System;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: View(typeof(BasemapToggleView))]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle

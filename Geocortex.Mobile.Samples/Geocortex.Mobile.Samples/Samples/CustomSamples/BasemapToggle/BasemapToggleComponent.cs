@@ -2,8 +2,6 @@
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Samples;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: Component(typeof(BasemapToggleComponent), "basemap-toggle", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle

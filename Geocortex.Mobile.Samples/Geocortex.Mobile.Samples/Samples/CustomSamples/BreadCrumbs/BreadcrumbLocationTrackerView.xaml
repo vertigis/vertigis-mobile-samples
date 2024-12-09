@@ -6,7 +6,7 @@
     <ContentView.Resources>
         <Style x:Key="BreadcrumbButton" TargetType="ui:EnhancedButton" BasedOn="{StaticResource MapWidgetButton}">
             <Setter Property="HeightRequest" Value="44"/>
-            <Setter Property="CornerRadius2" Value="0"/>
+            <Setter Property="CornerRadius" Value="0"/>
             <Setter Property="BorderWidth" Value="0"/>
 
             <Setter Property="VerticalOptions" Value="Center"/>
@@ -27,7 +27,7 @@
             <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Spacing="1" Padding="0" Margin="0">
                 <ui:EnhancedButton
                     x:Name="BreadcrumbButton"
-                    Image="gcx_ui_map_pin"
+                    ImageSource="gcx_ui_map_pin"
                     Style="{StaticResource BreadcrumbCircleMapWidgetButton}"
                     Command="{Binding BreadcrumbLocationTrackerCommand}"/>
             </StackLayout>

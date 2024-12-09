@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent;
+﻿using VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent;
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Workflow.Runtime;
 using VertiGIS.Workflow.Runtime.Definition;

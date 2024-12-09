@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VertiGIS.Mobile.Samples.SampleSelector
+﻿namespace VertiGIS.Mobile.Samples.SampleSelector
 {
     public class SampleGroup : List<Sample>
     {

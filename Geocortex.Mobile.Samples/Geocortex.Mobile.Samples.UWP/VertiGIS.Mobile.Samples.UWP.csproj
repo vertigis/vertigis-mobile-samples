@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+	  <!-- https://github.com/dotnet/maui/issues/5372 -->
+	  <EnableDefaultXamlItems>false</EnableDefaultXamlItems>
+	  <!-- We do not want XAML files to be processed as .NET MAUI XAML -->
+	  <EnableDefaultMauiItems>false</EnableDefaultMauiItems>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Exe</OutputType>
     <RootNamespace>Geocortex.Mobile.Samples.UWP</RootNamespace>

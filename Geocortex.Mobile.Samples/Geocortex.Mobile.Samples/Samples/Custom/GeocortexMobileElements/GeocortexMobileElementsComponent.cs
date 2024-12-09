@@ -3,8 +3,6 @@ using VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Toolkit.Views;
 using System.Xml.Linq;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: Component(typeof(GeocortexMobileElementsComponent), "geocortex-mobile-elements", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements
@@ -23,7 +21,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements
                 Margin = new Thickness(10, 0)
             };
 
-            var enhancedActivityIndicator = new EnhancedActivityIndicator()
+            var enhancedActivityIndicator = new ActivityIndicator()
             {
                 IsRunning = true,
                 HeightRequest = 75,
@@ -49,7 +47,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements
                 Margin = new Thickness(10, 0)
             };
 
-            var enhancedSwitch = new EnhancedSwitch()
+            var enhancedSwitch = new Switch()
             {
                 Margin = new Thickness(10, 0, 10, 10)
             };

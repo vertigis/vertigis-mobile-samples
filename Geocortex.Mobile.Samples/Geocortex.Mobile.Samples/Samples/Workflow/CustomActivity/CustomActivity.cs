@@ -1,6 +1,4 @@
 ﻿using VertiGIS.Workflow.Runtime;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace VertiGIS.Mobile.Samples.Samples.Workflow.CustomActivity
 {

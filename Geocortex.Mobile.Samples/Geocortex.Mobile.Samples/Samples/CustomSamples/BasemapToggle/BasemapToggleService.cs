@@ -3,8 +3,6 @@ using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Composition.Services;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle;
-using System.Threading.Tasks;
-using Microsoft.Maui.ApplicationModel;
 
 [assembly: Service(typeof(BasemapToggleService), PropertiesAutowired = true)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle

@@ -1,7 +1,6 @@
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Hosting;
 
-namespace Geocortex.Mobile.Samples.UWP;
+namespace VertiGIS.Mobile.Samples.UWP;
 
 public static class MauiProgram
 {

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>VertiGIS.Mobile.Samples</RootNamespace>
-    <TargetFrameworks>net8.0-ios;net8.0-android;net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0-ios;net8.0-android<!--;net8.0--></TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
     <UseMaui>True</UseMaui>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
@@ -173,7 +173,7 @@
   <ItemGroup>
     <PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
     <PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.34.0-PullRequest22521.12" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.34.0-PullRequest22521.12" Exclude="buildTransitive;build" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

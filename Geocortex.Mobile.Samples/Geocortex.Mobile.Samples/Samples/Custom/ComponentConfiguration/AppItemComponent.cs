@@ -2,10 +2,7 @@
 using VertiGIS.Mobile.Samples.Samples.Custom.ComponentConfiguration;
 using VertiGIS.Mobile.Infrastructure.App;
 using VertiGIS.Mobile.Infrastructure.Layout;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: AppItemComponent(typeof(AppItemComponent), "component-config", AppItemConfiguration.ConfigItemtype, XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.ComponentConfiguration

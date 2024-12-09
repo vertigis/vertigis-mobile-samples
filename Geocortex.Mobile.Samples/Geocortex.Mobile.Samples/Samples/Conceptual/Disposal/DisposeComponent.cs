@@ -2,11 +2,8 @@
 using VertiGIS.Mobile.Samples.Samples.Conceptual.DisposeComponent;
 using VertiGIS.Mobile.Composition.Layout;
 using Microsoft.Win32.SafeHandles;
-using System;
 using System.ComponentModel;
 using System.Xml.Linq;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: Component(typeof(DisposeComponent), "dispose", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.DisposeComponent

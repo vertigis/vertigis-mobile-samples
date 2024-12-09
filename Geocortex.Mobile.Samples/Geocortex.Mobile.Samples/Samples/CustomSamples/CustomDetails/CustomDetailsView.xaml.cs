@@ -1,8 +1,4 @@
-﻿using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
-
-namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails
+﻿namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CustomDetailsView : ContentView

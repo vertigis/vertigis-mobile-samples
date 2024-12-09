@@ -1,7 +1,5 @@
 ﻿using VertiGIS.Workflow.Runtime;
 using VertiGIS.Workflow.Runtime.Activities.App;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent
 {

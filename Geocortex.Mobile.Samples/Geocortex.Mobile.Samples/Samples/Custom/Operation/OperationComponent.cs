@@ -3,12 +3,8 @@ using VertiGIS.Mobile.Samples.Samples.Custom.Operation;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Toolkit.Messaging;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using Newtonsoft.Json;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: Component(typeof(OperationComponent), "operation", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation

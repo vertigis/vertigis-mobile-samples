@@ -3,12 +3,11 @@ using VertiGIS.Mobile.Samples.Location;
 using VertiGIS.Mobile.Samples.Droid.Location;
 using Android.Content;
 using Android.Locations;
-using Microsoft.Maui.Devices.Sensors;
 
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.
  * This component is used to demonstrate platform specific implementations and api/method calls. */
-[assembly: Xamarin.Forms.Dependency(typeof(AndroidLocation))]
+[assembly: Dependency(typeof(AndroidLocation))]
 namespace VertiGIS.Mobile.Samples.Droid.Location
 {
     public class AndroidLocation : Java.Lang.Object, ILocation, ILocationListener

@@ -2,11 +2,7 @@
 using VertiGIS.Mobile.Samples;
 using VertiGIS.Mobile.Samples.Location;
 using VertiGIS.Mobile.Composition.Layout;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
-using Microsoft.Maui.Devices.Sensors;
 
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.
@@ -63,11 +59,10 @@ namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Location
                 var lat = e.Latitude;
                 var lng = e.Longitude;
 
-                Xamarin.Forms.Device.InvokeOnMainThreadAsync(() =>
+                MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     _latitude.Text = $"Latitude: {lat.ToString()}";
                     _longitude.Text = $"Longitude: {lng.ToString()}";
-
                 });
             };
 

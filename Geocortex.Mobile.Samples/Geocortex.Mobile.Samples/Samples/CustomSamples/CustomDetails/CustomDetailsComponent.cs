@@ -3,13 +3,9 @@ using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Infrastructure.Messaging;
 using VertiGIS.Mobile.Samples;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
-[assembly:Component(typeof(CustomDetailsComponent), "custom-details", XmlNamespace = XmlNamespaces.SamplesNamespace)]
+[assembly: Component(typeof(CustomDetailsComponent), "custom-details", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails
 {
     class CustomDetailsComponent : ComponentBase

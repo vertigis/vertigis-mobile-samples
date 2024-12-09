@@ -1,15 +1,8 @@
 ﻿using VertiGIS.Mobile.Samples.SampleSelector;
 using VertiGIS.Mobile.Infrastructure.App;
 using VertiGIS.Mobile.Infrastructure.Configuration;
-using VertiGIS.Mobile.Toolkit.Views;
-using System;
-using System.IO;
 using System.Reflection;
-using System.Threading.Tasks;
 using VertiGIS.Mobile.Toolkit.Views.Markdown;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 namespace VertiGIS.Mobile.Samples
 {
@@ -65,8 +58,7 @@ namespace VertiGIS.Mobile.Samples
         {
             // OnResume will get called when background processing begins.
             // UWP activated events are raised in UWP App.xaml.cs.
-            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
-                                    if (Xamarin.Forms.Device.RuntimePlatform != Xamarin.Forms.Device.UWP)
+            if (DeviceInfo.Platform != DevicePlatform.WinUI)
             {
                 AppManager.Instance.OnActivated();
             }
@@ -77,8 +69,7 @@ namespace VertiGIS.Mobile.Samples
         public async Task LoadApp(Sample sample)
         {
             // Push a loading spinner.
-            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
-                        if (Device.RuntimePlatform != Device.iOS)
+                        if (DeviceInfo.Platform != DevicePlatform.iOS)
             {
                 await MainPage.Navigation.PushModalAsync(new ContentPage()
                 {
@@ -120,8 +111,7 @@ namespace VertiGIS.Mobile.Samples
             await MainPage.Navigation.PushAsync(tabbedPage, false);
 
             // Pop the loading spinner.
-            // TODO Xamarin.Forms.Device.RuntimePlatform is no longer supported. Use Microsoft.Maui.Devices.DeviceInfo.Platform instead. For more details see https://learn.microsoft.com/en-us/dotnet/maui/migration/forms-projects#device-changes
-                        if (Device.RuntimePlatform != Device.iOS)
+                        if (DeviceInfo.Platform != DevicePlatform.iOS)
             {
                 await MainPage.Navigation.PopModalAsync();
             }
@@ -171,7 +161,7 @@ namespace VertiGIS.Mobile.Samples
             };
 
             // Spinner
-            var spinner = new EnhancedActivityIndicator()
+            var spinner = new ActivityIndicator()
             {
                 IsRunning = true
             };

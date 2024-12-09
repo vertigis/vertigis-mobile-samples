@@ -1,14 +1,11 @@
 ﻿using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.UI;
-using Esri.ArcGISRuntime.Xamarin.Forms;
+using Esri.ArcGISRuntime.Maui;
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Composition.Services;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs;
-using System;
-using System.Threading.Tasks;
-using Microsoft.Maui.Devices.Sensors;
 
 [assembly: Service(typeof(BreadcrumbLocationTrackerService), PropertiesAutowired = true)]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs

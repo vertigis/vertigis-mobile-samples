@@ -1,14 +1,10 @@
-﻿using Esri.ArcGISRuntime.Xamarin.Forms;
+﻿using Esri.ArcGISRuntime.Maui;
 using VertiGIS.Mobile.Composition;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs;
 using VertiGIS.Mobile.Toolkit.Messaging;
 using VertiGIS.Mobile.Toolkit.Utilities;
-using System;
-using System.Collections.Generic;
 using System.Windows.Input;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui;
 
 [assembly: ViewModel(typeof(BreadcrumbLocationTrackerViewModel))]
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs

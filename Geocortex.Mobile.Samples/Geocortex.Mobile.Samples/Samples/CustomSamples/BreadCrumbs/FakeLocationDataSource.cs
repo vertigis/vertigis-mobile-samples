@@ -9,12 +9,8 @@
 
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Location;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Timers;
-using Microsoft.Maui.Devices.Sensors;
+using Timer = System.Timers.Timer;
 
 namespace VertiGIS.Mobile.Samples.Samples.CustomSamples.Breadcrumbs
 {

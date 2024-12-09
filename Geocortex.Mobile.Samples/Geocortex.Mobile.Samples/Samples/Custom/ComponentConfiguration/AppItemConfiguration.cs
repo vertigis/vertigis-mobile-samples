@@ -1,9 +1,6 @@
 ﻿using VertiGIS.Mobile.Samples.Samples.Custom.ComponentConfiguration;
 using VertiGIS.ArcGISExtensions;
 using VertiGIS.Mobile.Infrastructure.App;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 [assembly: AppItem(AppItemConfiguration.ConfigItemtype, typeof(AppItemConfiguration))]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.ComponentConfiguration
