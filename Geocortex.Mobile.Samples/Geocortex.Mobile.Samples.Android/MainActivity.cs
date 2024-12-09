@@ -1,5 +1,6 @@
 using Android.App;
 using Android.Content.PM;
+using Microsoft.Maui;
 
 namespace VertiGIS.Mobile.Samples.Droid;
 

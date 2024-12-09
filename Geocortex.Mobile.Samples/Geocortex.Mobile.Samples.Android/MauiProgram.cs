@@ -1,3 +1,5 @@
+using Microsoft.Maui.Hosting;
+
 namespace VertiGIS.Mobile.Samples.Droid;
 
 public static class MauiProgram

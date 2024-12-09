@@ -1,6 +1,7 @@
 using System;
 using Android.App;
 using Android.Runtime;
+using Microsoft.Maui.Hosting;
 
 namespace VertiGIS.Mobile.Samples.Droid
 {

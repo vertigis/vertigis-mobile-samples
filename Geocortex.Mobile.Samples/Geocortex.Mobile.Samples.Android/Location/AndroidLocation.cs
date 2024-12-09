@@ -3,11 +3,14 @@ using VertiGIS.Mobile.Samples.Location;
 using VertiGIS.Mobile.Samples.Droid.Location;
 using Android.Content;
 using Android.Locations;
+using AndroidApplication = Android.App.Application;
+using ALLocation = Android.Locations.Location;
+using AOSBundle = Android.OS.Bundle;
 
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.
  * This component is used to demonstrate platform specific implementations and api/method calls. */
-[assembly: Dependency(typeof(AndroidLocation))]
+[assembly: Microsoft.Maui.Controls.Dependency(typeof(AndroidLocation))]
 namespace VertiGIS.Mobile.Samples.Droid.Location
 {
     public class AndroidLocation : Java.Lang.Object, ILocation, ILocationListener
@@ -18,9 +21,9 @@ namespace VertiGIS.Mobile.Samples.Droid.Location
 
         public void OnProviderEnabled(string provider) { }
 
-        public void OnStatusChanged(string provider, Availability status, Android.OS.Bundle extras) { }
+        public void OnStatusChanged(string provider, Availability status, AOSBundle extras) { }
 
-        public void OnLocationChanged(Android.Locations.Location location)
+        public void OnLocationChanged(ALLocation location)
         {
             if (location != null)
             {
@@ -49,7 +52,7 @@ namespace VertiGIS.Mobile.Samples.Droid.Location
 
         public void ObtainMyLocation()
         {
-            _locationManager = (LocationManager)Android.App.Application.Context.GetSystemService(Context.LocationService);
+            _locationManager = (LocationManager)AndroidApplication.Context.GetSystemService(Context.LocationService);
             _locationManager.RequestLocationUpdates(LocationManager.NetworkProvider, 0, 0, this);
         }
 
