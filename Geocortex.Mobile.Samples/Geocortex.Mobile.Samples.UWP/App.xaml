@@ -8,9 +8,18 @@
     <maui:MauiWinUIApplication.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="VertiGIS.Mobile.UWP/Resources/VertiGISResources.xaml" />
+                <ResourceDictionary Source="VertiGIS.Mobile.Toolkit.UWP/Resources/ToolkitResources.xaml" />
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="DefaultButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Blue"/>
+            </Style>
+            <!--Remove margin around the tabbed page control.-->
+            <Style TargetType="PivotItem">
+                <Setter Property="Margin" Value="0" />
+            </Style>
             <!-- Other app resources here -->
         </ResourceDictionary>
     </maui:MauiWinUIApplication.Resources>
