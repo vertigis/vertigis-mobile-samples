@@ -8,8 +8,7 @@
     <maui:MauiWinUIApplication.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="VertiGIS.Mobile.UWP/Resources/VertiGISResources.xaml" />
-                <ResourceDictionary Source="VertiGIS.Mobile.Toolkit.UWP/Resources/ToolkitResources.xaml" />
+                <ResourceDictionary Source="VertiGIS.Mobile/Platforms/Windows/VertiGISResources.xaml" />
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
