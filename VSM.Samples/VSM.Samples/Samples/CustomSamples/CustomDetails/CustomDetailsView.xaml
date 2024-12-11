@@ -6,10 +6,10 @@
              mc:Ignorable="d"
              x:Class="VertiGIS.Mobile.Samples.Samples.CustomSamples.CustomDetails.CustomDetailsView">
   <ContentView.Content>
-      <StackLayout Margin="10">
+      <VerticalStackLayout Margin="10">
             <Label Text="Hello Custom Details!"  />
             <Label Text="Hello Custom Details!" x:Name="SourceLabel" />
             <Label Text="Hello Custom Details!" x:Name="TitleLabel" />
-        </StackLayout>
+        </VerticalStackLayout>
   </ContentView.Content>
 </ContentView>

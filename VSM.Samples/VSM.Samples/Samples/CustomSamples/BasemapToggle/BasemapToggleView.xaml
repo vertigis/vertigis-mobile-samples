@@ -6,12 +6,12 @@
              mc:Ignorable="d"
              x:Class="VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle.BasemapToggleView">
     <ContentView.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal">
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
                 <Label Text="Show basemap" VerticalOptions="Center"></Label>
                 <Switch Toggled="Switch_Toggled" IsToggled="True" BackgroundColor="Transparent" VerticalOptions="Center"></Switch>
-            </StackLayout>
+            </HorizontalStackLayout>
             <Button Clicked="OnButtonClicked" Text="Switch Basemap"/>
-        </StackLayout>
+        </VerticalStackLayout>
     </ContentView.Content>
 </ContentView>

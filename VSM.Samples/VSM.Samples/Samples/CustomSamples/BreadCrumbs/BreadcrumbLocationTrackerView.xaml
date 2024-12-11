@@ -24,13 +24,13 @@
     </ContentView.Resources>
     <ContentView.Content>
         <ui:RoundedShadowContent CornerRadius="21">
-            <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Spacing="1" Padding="0" Margin="0">
+            <HorizontalStackLayout BackgroundColor="LightGray" Spacing="1" Padding="0" Margin="0">
                 <ui:EnhancedButton
                     x:Name="BreadcrumbButton"
                     ImageSource="gcx_ui_map_pin"
                     Style="{StaticResource BreadcrumbCircleMapWidgetButton}"
                     Command="{Binding BreadcrumbLocationTrackerCommand}"/>
-            </StackLayout>
+            </HorizontalStackLayout>
         </ui:RoundedShadowContent>
     </ContentView.Content>
 </ContentView>

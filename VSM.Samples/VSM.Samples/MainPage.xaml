@@ -4,11 +4,11 @@
              xmlns:local="clr-namespace:VertiGIS.Mobile.Samples"
              x:Class="VertiGIS.Mobile.Samples.MainPage">
 
-    <StackLayout>
+    <VerticalStackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="Welcome to Maui!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+           VerticalOptions="Center" />
+    </VerticalStackLayout>
 
 </ContentPage>
