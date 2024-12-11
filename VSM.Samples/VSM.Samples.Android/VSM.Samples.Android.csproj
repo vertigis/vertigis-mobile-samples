@@ -36,7 +36,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Geocortex.Mobile.Samples\VSM.Samples.csproj" />
+		<ProjectReference Include="..\VSM.Samples\VSM.Samples.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Remove="Resources\drawable\App.cs" />

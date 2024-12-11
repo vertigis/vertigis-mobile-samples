@@ -6,8 +6,7 @@
 		<EnableDefaultMauiItems>false</EnableDefaultMauiItems>
 		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
 		<OutputType>WinExe</OutputType>
-		<RootNamespace>Geocortex.Mobile.Samples.UWP</RootNamespace>
-		<AssemblyName>Geocortex.Mobile.Samples.UWP</AssemblyName>
+		<AssemblyName>VSM.Samples.UWP</AssemblyName>
 		<DefaultLanguage>en-US</DefaultLanguage>
 		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
 		<EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
@@ -77,15 +76,15 @@
 	<ItemGroup>
 		<MauiAsset Include="Assets\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 		<None Remove="Assets\**" />
-		<Content Include="..\Geocortex.Mobile.Samples\SampleSelector\demo.png">
+		<Content Include="..\VSM.Samples\SampleSelector\demo.png">
 			<Link>demo.png</Link>
 		</Content>
-		<Content Include="..\Geocortex.Mobile.Samples\SampleSelector\description.png">
+		<Content Include="..\VSM.Samples\SampleSelector\description.png">
 			<Link>description.png</Link>
 		</Content>
-		<Content Include="..\Geocortex.Mobile.Samples\Samples\**\*.json" Link="Assets\%(Filename)%(Extension)" />
-		<Content Include="..\Geocortex.Mobile.Samples\Samples\**\*.xml" Link="Assets\%(Filename)%(Extension)" />
-		<Content Include="..\Geocortex.Mobile.Samples\license.txt">
+		<Content Include="..\VSM.Samples\Samples\**\*.json" Link="Assets\%(Filename)%(Extension)" />
+		<Content Include="..\VSM.Samples\Samples\**\*.xml" Link="Assets\%(Filename)%(Extension)" />
+		<Content Include="..\VSM.Samples\license.txt">
 			<Link>Assets\license.txt</Link>
 		</Content>
 	</ItemGroup>
@@ -110,7 +109,7 @@
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Geocortex.Mobile.Samples\VSM.Samples.csproj" />
+		<ProjectReference Include="..\VSM.Samples\VSM.Samples.csproj" />
 	</ItemGroup>
 	<ProjectExtensions />
 </Project>
