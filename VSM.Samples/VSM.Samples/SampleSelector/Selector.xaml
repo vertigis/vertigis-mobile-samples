@@ -42,17 +42,6 @@
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
 
-        <!--iOS has a default footer - override it-->
-        <!--<CollectionView.GroupFooterTemplate>
-            <OnPlatform x:TypeArguments="DataTemplate">
-                <On Platform="iOS">
-                    <DataTemplate>
-                        <StackLayout />
-                    </DataTemplate>
-                </On>
-            </OnPlatform>
-        </CollectionView.GroupFooterTemplate>-->
-
         <CollectionView.ItemsLayout>
             <OnIdiom x:TypeArguments="GridItemsLayout">
                 <OnIdiom.Phone>
