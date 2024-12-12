@@ -18,6 +18,7 @@
 		<PublishProfile>win10-$(Platform).pubxml</PublishProfile>
 		<TargetFrameworks>net8.0-windows10.0.19041.0</TargetFrameworks>
 		<UseMaui>True</UseMaui>
+		<MauiVersion>8.0.92</MauiVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
 		<OutputPath>bin\ARM\Debug\</OutputPath>

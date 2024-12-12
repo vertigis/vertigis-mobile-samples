@@ -4,6 +4,7 @@
 		<AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
 		<TargetFrameworks>net8.0-android</TargetFrameworks>
 		<UseMaui>True</UseMaui>
+		<MauiVersion>8.0.92</MauiVersion>
 		<SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
 		<AssemblyTitle>VertiGIS.Mobile.Samples.Android</AssemblyTitle>
 		<Product>VertiGIS.Mobile.Samples.Android</Product>

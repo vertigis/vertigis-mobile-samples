@@ -6,6 +6,7 @@
 		<TargetFrameworks>net8.0-ios</TargetFrameworks>
 		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
 		<UseMaui>True</UseMaui>
+		<MauiVersion>8.0.92</MauiVersion>
 		<SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -71,6 +72,11 @@
 		<Copyright>Copyright ©  2014</Copyright>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	  <ProvisioningType>automatic</ProvisioningType>
+	  <CodesignKey>Apple Development: Created via API (O17P7NVJQPH6)</CodesignKey>
+	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime.Maui">
