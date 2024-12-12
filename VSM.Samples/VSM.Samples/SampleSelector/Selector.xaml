@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:theme="clr-namespace:VertiGIS.Mobile.Infrastructure.Styles;assembly=VertiGIS.Mobile"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             x:Class="VertiGIS.Mobile.Samples.SampleSelector.Selector"
+             Title="Samples">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <theme:AppSelectorStyles/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <CollectionView 
+            x:Name="collectionList"
+            ItemsSource="{Binding Samples}" 
+            IsGrouped="true" 
+            SelectionMode="Single"
+            SelectionChanged="OnCollectionViewSelectionChanged"
+            HorizontalOptions="Center"
+            Margin="10"
+            VerticalOptions="Fill">
+        <CollectionView.GroupHeaderTemplate>
+            <DataTemplate>
+                <Border Padding="0"
+                        BackgroundColor="{StaticResource AppSelector_PrimaryColor}"
+                        Margin="15">
+                    <Label Text="{Binding Name}"
+                           Margin="20, 5"
+                           BackgroundColor="Transparent"
+                           FontSize="Medium"
+                           VerticalOptions="Center" />
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="5" />
+                    </Border.StrokeShape>
+                </Border>
+            </DataTemplate>
+        </CollectionView.GroupHeaderTemplate>
+
+        <CollectionView.ItemsLayout>
+            <OnIdiom x:TypeArguments="GridItemsLayout">
+                <OnIdiom.Phone>
+                    <GridItemsLayout Orientation="Vertical" Span="1" />
+                </OnIdiom.Phone>
+                <OnIdiom.Tablet>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </OnIdiom.Tablet>
+                <OnIdiom.Desktop>
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
+                </OnIdiom.Desktop>
+            </OnIdiom>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout Margin="30, 0" Padding="30, 15" BackgroundColor="White">
+                    <Label Text="{Binding Name}"
+                               FontSize="Small"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                    <Label Text="{Binding Description}"
+                               FontSize="Micro"
+                               TextColor="Black"
+                               MaxLines="1"                              
+                               LineBreakMode="TailTruncation" />
+                    <Label Text="{Binding Platform}"
+                               FontSize="Micro"
+                               TextColor="Black"
+                               FontAttributes="Italic"
+                               MaxLines="1"                              
+                               LineBreakMode="TailTruncation" />
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
