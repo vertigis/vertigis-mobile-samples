@@ -7,16 +7,16 @@
     https://geocortex.com/layout/v1 ../../../layout-custom.xsd"
     xmlns:custom="https://geocortex/layout/samples">
 
-  <split>
-    
-    <panel>
-      <custom:geocortex-mobile-elements title="Mobile Code"/>
-    </panel>
+	<split>
 
-    <panel>
-      <custom:geocortex-mobile-elements-xaml title="Mobile XAML" />
-    </panel>
-    
-  </split>
-  
+		<panel>
+			<custom:vsm-elements title="Mobile Code"/>
+		</panel>
+
+		<panel>
+			<custom:vsm-elements-xaml title="Mobile XAML" />
+		</panel>
+
+	</split>
+
 </layout>

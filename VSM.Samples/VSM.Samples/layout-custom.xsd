@@ -128,10 +128,10 @@
     </complexType>
   </element>
 
-  <element name="geocortex-mobile-elements" substitutionGroup="base:component">
+  <element name="vsm-elements" substitutionGroup="base:component">
     <annotation>
       <documentation xml:lang="en">
-        A custom component that uses Geocortex Mobile elements.
+        A custom component that uses VertiGIS Studio Mobile elements.
       </documentation>
     </annotation>
     <complexType>
@@ -141,11 +141,11 @@
     </complexType>
   </element>
 
-  <element name="geocortex-mobile-elements-xaml" substitutionGroup="base:component">
+  <element name="vsm-elements-xaml" substitutionGroup="base:component">
     <annotation>
       <documentation xml:lang="en">
-        A custom component that uses Geocortex Mobile XAML elements.
-      </documentation>
+		  A custom component that uses VertiGIS Studio Mobile XAML elements.
+	  </documentation>
     </annotation>
     <complexType>
       <complexContent mixed="true">
@@ -183,7 +183,7 @@
   <element name="logging" substitutionGroup="base:component">
     <annotation>
       <documentation xml:lang="en">
-        A custom component that demonstrates logging in a Geocortex Mobile app.
+        A custom component that demonstrates logging in a VertiGIS Studio Mobile app.
       </documentation>
     </annotation>
     <complexType>

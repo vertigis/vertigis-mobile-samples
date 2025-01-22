@@ -1,15 +1,15 @@
 ﻿using VertiGIS.Mobile.Samples;
-using VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements;
+using VertiGIS.Mobile.Samples.Samples.Custom.VSMElements;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Toolkit.Views;
 using System.Xml.Linq;
 
-[assembly: Component(typeof(GeocortexMobileElementsComponent), "geocortex-mobile-elements", XmlNamespace = XmlNamespaces.SamplesNamespace)]
-namespace VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements
+[assembly: Component(typeof(VSMElementsComponent), "vsm-elements", XmlNamespace = XmlNamespaces.SamplesNamespace)]
+namespace VertiGIS.Mobile.Samples.Samples.Custom.VSMElements
 {
-    internal class GeocortexMobileElementsComponent : ComponentBase
+    internal class VSMElementsComponent : ComponentBase
     {
-        public GeocortexMobileElementsComponent()
+        public VSMElementsComponent()
         {
         }
 

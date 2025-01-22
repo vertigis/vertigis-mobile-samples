@@ -48,7 +48,7 @@
                     App = "app.json",
                     Layout = null,
                     Description = "A VertiGIS Studio Mobile app with common components and configurations.",
-                    PathFragment = "App.GeocortexMobileViewer"
+                    PathFragment = "App.VSMViewer"
                 },
             }));
 
@@ -212,10 +212,10 @@
                 new Sample
                 {
                     Name = "VertiGIS Studio Mobile Elements",
-                    App = "geocortex-mobile-elements.json",
-                    Layout = "geocortex-mobile-elements.xml",
+                    App = "vsm-elements.json",
+                    Layout = "vsm-elements.xml",
                     Description = "Getting started with VertiGIS Studio Mobile enhanced elements.",
-                    PathFragment = "Custom.GeocortexMobileElements"
+                    PathFragment = "Custom.VSMElements"
                 },
                 //new Sample
                 //{
@@ -223,7 +223,7 @@
                 //    App = "gxm-styles.json",
                 //    Layout = "gxm-styles.xml",
                 //    Description = "An introduction to using VertiGIS Studio Mobile styles.",
-                //    PathFragment = "Custom.GeocortexMobileStyles"
+                //    PathFragment = "Custom.VSMStyles"
                 //},
             }));
 
