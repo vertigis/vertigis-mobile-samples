@@ -1,0 +1,23 @@
+﻿{
+  "$schema": "..\\..\\..\\..\\..\\ViewerSpec\\app-config\\mobile\\mobile-app-config.schema.json",
+
+  "schemaVersion": "1.0",
+
+  "items": [
+    {
+      "$type": "map-extension",
+      "id": "map1",
+      "webMap": "c27fa8668647489482dd418b0d765aec",
+      "onClick": [ "custom.operation" ]
+    },
+    {
+      "$type": "portal-extension",
+      "id": "latitudegeo",
+      "appId": "Xn2yFLHGmsXdYZ3D",
+      "isDefault": true,
+      "portal": {
+        "url": "https://www.arcgis.com/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VertiGIS.Mobile.Samples.Samples.CustomSamples.BasemapToggle.BasemapToggleView">
+    <ContentView.Content>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Show basemap" VerticalOptions="Center"></Label>
+                <Switch Toggled="Switch_Toggled" IsToggled="True" BackgroundColor="Transparent" VerticalOptions="Center"></Switch>
+            </HorizontalStackLayout>
+            <Button Clicked="OnButtonClicked" Text="Switch Basemap"/>
+        </VerticalStackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<layout
+    xmlns="https://geocortex.com/layout/v1"
+    xmlns:gxm="https://geocortex.com/layout/mobile/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://geocortex.com/layout/v1 ../../../../../ViewerSpec/layout/layout-mobile.xsd
+    https://geocortex.com/layout/v1 ../../../layout-custom.xsd"
+    xmlns:custom="https://geocortex/layout/samples">
+
+  <panel>
+    <stack title="Button Styles" halign="start">
+      <text margin="1">Round Buttons</text>
+      <button style="round" icon="check" show-title="false" margin="1"/>
+      <button style="round" margin="1">Text</button>
+      <button style="round" icon="check" margin="1">Text and Icon</button>
+      <text margin="1">Square (Default) Buttons</text>
+      <button icon="check" show-title="false" margin="1"/>
+      <button margin="1">Text</button>
+      <button icon="check" margin="1">Text and Icon</button>
+    </stack>
+  </panel>
+
+</layout>
