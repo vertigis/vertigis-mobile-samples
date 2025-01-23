@@ -47,6 +47,85 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="..\VSM.Samples\VSM.Samples\license.txt" Link="Platforms\Windows\Assets\license.txt" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\Commands\commands.json" Link="Platforms\Windows\Assets\commands.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\Commands\commands.xml" Link="Platforms\Windows\Assets\commands.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\MapAndFeatureCommands\map-and-feature-commands.json" Link="Platforms\Windows\Assets\map-and-feature-commands.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\MapAndFeatureCommands\map-and-feature-commands.xml" Link="Platforms\Windows\Assets\map-and-feature-commands.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\MapConfiguration\map-configuration.json" Link="Platforms\Windows\Assets\map-configuration.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\MapConfiguration\map-configuration.xml" Link="Platforms\Windows\Assets\map-configuration.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\Theme\theme.json" Link="Platforms\Windows\Assets\theme.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\AppConfiguration\Theme\theme.xml" Link="Platforms\Windows\Assets\theme.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\App\VSMViewer\app.json" Link="Platforms\Windows\Assets\app.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\App\VSMViewer\layout-large.xml" Link="Platforms\Windows\Assets\layout-large.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\App\VSMViewer\layout-small.xml" Link="Platforms\Windows\Assets\layout-small.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\ActivateDeactivateChildren\activate-deactivate-children.json" Link="Platforms\Windows\Assets\activate-deactivate-children.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\ActivateDeactivateChildren\activate-deactivate-children.xml" Link="Platforms\Windows\Assets\activate-deactivate-children.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\ActivateDeactivate\activate-deactivate.json" Link="Platforms\Windows\Assets\activate-deactivate.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\ActivateDeactivate\activate-deactivate.xml" Link="Platforms\Windows\Assets\activate-deactivate.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\DependencyInjection\dependency-injection.json" Link="Platforms\Windows\Assets\dependency-injection.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\DependencyInjection\dependency-injection.xml" Link="Platforms\Windows\Assets\dependency-injection.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Disposal\disposal.json" Link="Platforms\Windows\Assets\disposal.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Disposal\disposal.xml" Link="Platforms\Windows\Assets\disposal.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Internationalization\i18n.json" Link="Platforms\Windows\Assets\i18n.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Internationalization\i18n.xml" Link="Platforms\Windows\Assets\i18n.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Logging\logging.json" Link="Platforms\Windows\Assets\logging.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\Logging\logging.xml" Link="Platforms\Windows\Assets\logging.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\OrientationLock\orientation-lock.json" Link="Platforms\Windows\Assets\orientation-lock.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\OrientationLock\orientation-lock.xml" Link="Platforms\Windows\Assets\orientation-lock.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\desktop.xml" Link="Platforms\Windows\Assets\desktop.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\phone-vs-desktop.json" Link="Platforms\Windows\Assets\phone-vs-desktop.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\phone.xml" Link="Platforms\Windows\Assets\phone.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\BasemapToggle\basemap-toggle.json" Link="Platforms\Windows\Assets\basemap-toggle.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\BasemapToggle\basemap-toggle.xml" Link="Platforms\Windows\Assets\basemap-toggle.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\BreadCrumbs\bread-crumbs.json" Link="Platforms\Windows\Assets\bread-crumbs.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\BreadCrumbs\bread-crumbs.xml" Link="Platforms\Windows\Assets\bread-crumbs.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\CustomDetails\custom-details.json" Link="Platforms\Windows\Assets\custom-details.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\CustomDetails\custom-details.xml" Link="Platforms\Windows\Assets\custom-details.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\Location\location.json" Link="Platforms\Windows\Assets\location.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\CustomSamples\Location\location.xml" Link="Platforms\Windows\Assets\location.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\ComponentConfiguration\component-configuration.json" Link="Platforms\Windows\Assets\component-configuration.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\ComponentConfiguration\component-configuration.xml" Link="Platforms\Windows\Assets\component-configuration.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Component\component.json" Link="Platforms\Windows\Assets\component.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Component\component.xml" Link="Platforms\Windows\Assets\component.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Operation\operation.json" Link="Platforms\Windows\Assets\operation.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Operation\operation.xml" Link="Platforms\Windows\Assets\operation.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Service\service.json" Link="Platforms\Windows\Assets\service.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\Service\service.xml" Link="Platforms\Windows\Assets\service.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\VSMElements\vsm-elements.json" Link="Platforms\Windows\Assets\vsm-elements.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\VSMElements\vsm-elements.xml" Link="Platforms\Windows\Assets\vsm-elements.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\XamlComponent\xaml-component.json" Link="Platforms\Windows\Assets\xaml-component.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Custom\XamlComponent\xaml-component.xml" Link="Platforms\Windows\Assets\xaml-component.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\ButtonStyles\button-styles.json" Link="Platforms\Windows\Assets\button-styles.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\ButtonStyles\button-styles.xml" Link="Platforms\Windows\Assets\button-styles.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Dialog\dialog.json" Link="Platforms\Windows\Assets\dialog.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Dialog\dialog.xml" Link="Platforms\Windows\Assets\dialog.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\HierarchicalPanelNavigation\hierarchical-panel-navigation.json" Link="Platforms\Windows\Assets\hierarchical-panel-navigation.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\HierarchicalPanelNavigation\hierarchical-panel-navigation.xml" Link="Platforms\Windows\Assets\hierarchical-panel-navigation.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\LayoutProperties\layout-properties.json" Link="Platforms\Windows\Assets\layout-properties.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\LayoutProperties\layout-properties.xml" Link="Platforms\Windows\Assets\layout-properties.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\MapPanel\map-panel.json" Link="Platforms\Windows\Assets\map-panel.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\MapPanel\map-panel.xml" Link="Platforms\Windows\Assets\map-panel.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\MapSearch\map-search.json" Link="Platforms\Windows\Assets\map-search.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\MapSearch\map-search.xml" Link="Platforms\Windows\Assets\map-search.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Split\split.json" Link="Platforms\Windows\Assets\split.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Split\split.xml" Link="Platforms\Windows\Assets\split.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Stack\stack.json" Link="Platforms\Windows\Assets\stack.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Stack\stack.xml" Link="Platforms\Windows\Assets\stack.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Taskbar\taskbar.json" Link="Platforms\Windows\Assets\taskbar.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Layout\Taskbar\taskbar.xml" Link="Platforms\Windows\Assets\taskbar.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity-workflow.json" Link="Platforms\Windows\Assets\custom-activity-workflow.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity.json" Link="Platforms\Windows\Assets\custom-activity.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity.xml" Link="Platforms\Windows\Assets\custom-activity.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component-workflow.json" Link="Platforms\Windows\Assets\custom-form-component-workflow.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component.json" Link="Platforms\Windows\Assets\custom-form-component.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component.xml" Link="Platforms\Windows\Assets\custom-form-component.xml" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\RunWorkflow\run-workflow.json" Link="Platforms\Windows\Assets\run-workflow.json" />
+	  <Content Include="..\VSM.Samples\VSM.Samples\Samples\Workflow\RunWorkflow\run-workflow.xml" Link="Platforms\Windows\Assets\run-workflow.xml" />
+	  <Content Include="Platforms\Windows\Assets\NLog.config" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <EmbeddedResource Include="Samples\AppConfiguration\Commands\README.md">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </EmbeddedResource>
@@ -154,6 +233,84 @@
 	  <EmbeddedResource Include="Samples\Workflow\RunWorkflow\README.md">
 	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Include="Platforms\Windows\Assets\LargeTile.scale-100.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\LargeTile.scale-125.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\LargeTile.scale-150.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\LargeTile.scale-200.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\LargeTile.scale-400.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SmallTile.scale-100.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SmallTile.scale-125.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SmallTile.scale-150.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SmallTile.scale-200.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SmallTile.scale-400.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SplashScreen.scale-100.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SplashScreen.scale-125.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SplashScreen.scale-150.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SplashScreen.scale-200.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\SplashScreen.scale-400.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\StoreLogo.scale-100.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\StoreLogo.scale-125.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\StoreLogo.scale-150.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\StoreLogo.scale-200.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\StoreLogo.scale-400.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\Wide310x150Logo.scale-100.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\Wide310x150Logo.scale-125.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\Wide310x150Logo.scale-150.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\Wide310x150Logo.scale-200.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
+	  <MauiAsset Include="Platforms\Windows\Assets\Wide310x150Logo.scale-400.png">
+	    <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+	  </MauiAsset>
 	</ItemGroup>
 
 	<ItemGroup>
