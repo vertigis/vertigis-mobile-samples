@@ -1,5 +1,6 @@
 ﻿using ObjCRuntime;
 using UIKit;
+using VertiGIS.Mobile.Samples.iOS;
 
 namespace VSM.Samples2
 {
