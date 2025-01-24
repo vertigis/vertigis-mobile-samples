@@ -42,7 +42,7 @@
 		<None Remove="Samples\Custom\ComponentConfiguration\README.md" />
 		<None Remove="Samples\Custom\Component\README.md" />
 		<None Remove="Samples\Conceptual\DependencyInjection\README.md" />
-		<None Remove="Samples\Custom\GeocortexMobileElements\README.md" />
+		<None Remove="Samples\Custom\VSMElements\README.md" />
 		<None Remove="Samples\Custom\Service\README.md" />
 		<None Remove="Samples\Custom\XamlComponent\README.md" />
 		<None Remove="Samples\Custom\Operation\README.md" />
@@ -75,7 +75,7 @@
 		<EmbeddedResource Include="Samples\AppConfiguration\Theme\README.md">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
-		<EmbeddedResource Include="Samples\App\GeocortexMobileViewer\README.md">
+		<EmbeddedResource Include="Samples\App\VSMViewer\README.md">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<EmbeddedResource Include="Samples\Conceptual\ActivateDeactivateChildren\README.md">
@@ -120,7 +120,7 @@
 		<EmbeddedResource Include="Samples\Conceptual\DependencyInjection\README.md">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
-		<EmbeddedResource Include="Samples\Custom\GeocortexMobileElements\README.md">
+		<EmbeddedResource Include="Samples\Custom\VSMElements\README.md">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<EmbeddedResource Include="Samples\Custom\Service\README.md">
@@ -219,7 +219,7 @@
 		<EmbeddedResource Update="Samples\CustomSamples\BreadCrumbs\BreadcrumbLocationTrackerView.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
-		<EmbeddedResource Update="Samples\Custom\GeocortexMobileElements\GeocortexMobileElementsXamlView.xaml">
+		<EmbeddedResource Update="Samples\Custom\VSMElements\VSMElementsXamlView.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Samples\Custom\XamlComponent\XamlComponentView.xaml">

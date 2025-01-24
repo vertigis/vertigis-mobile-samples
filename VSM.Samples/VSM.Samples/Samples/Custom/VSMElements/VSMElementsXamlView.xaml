@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ui="clr-namespace:VertiGIS.Mobile.Toolkit.Views;assembly=VertiGIS.Mobile.Toolkit"
              mc:Ignorable="d"
-             x:Class="VertiGIS.Mobile.Samples.Samples.Custom.GeocortexMobileElements.GeocortexMobileElementsXamlView">
+             x:Class="VertiGIS.Mobile.Samples.Samples.Custom.VSMElements.VSMElementsXamlView">
     <ContentView.Content>
         <VerticalStackLayout>
             <Label Text="This is an activity indicator."
