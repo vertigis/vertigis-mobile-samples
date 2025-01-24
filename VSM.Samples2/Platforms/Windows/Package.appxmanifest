@@ -26,7 +26,7 @@
 						<uap:ShowOn Tile="square310x310Logo" />
 					</uap:ShowNameOnTiles>
 				</uap:DefaultTile>
-				<uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#00777A" />
+				<!--<uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#00777A" />-->
 			</uap:VisualElements>
 		</Application>
 	</Applications>
