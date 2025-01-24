@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSM.Samples2", "VSM.Samples2\VSM.Samples2.csproj", "{C1CB9FC4-8AC2-4766-8BED-36AA0B1BA37D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSM.Samples", "VSM.Samples\VSM.Samples.csproj", "{C1CB9FC4-8AC2-4766-8BED-36AA0B1BA37D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
