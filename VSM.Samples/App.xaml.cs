@@ -82,7 +82,7 @@ namespace VSM.Samples
             // Configure some paths.
             var app = new Uri("resource://" + sample?.App);
             var layout = string.IsNullOrEmpty(sample?.Layout) ? null : new Uri("resource://" + sample?.Layout);
-            var readme = $"VertiGIS.Mobile.Samples.Samples.{sample.PathFragment}.README.md";
+            var readme = $"VSM.Samples.Samples.{sample.PathFragment}.README.md";
 
             if (layout == null)
             {
@@ -125,6 +125,11 @@ namespace VSM.Samples
             string readmeContent;
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource))
             {
+                if(stream == null)
+                {
+                    throw new ArgumentException($"Unable to find resource for ${resource}");
+                }
+
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     readmeContent = reader.ReadToEnd();
