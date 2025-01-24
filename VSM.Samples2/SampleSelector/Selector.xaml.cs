@@ -3,11 +3,11 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Selector : ContentPage
     {
-        private readonly App _app;
+        private readonly VSM.Samples.App _app;
 
         public List<SampleGroup> Samples { get; private set; } = new List<SampleGroup>();
 
-        public Selector(App app)
+        public Selector(VSM.Samples.App app)
         {
             _app = app;
 
@@ -16,11 +16,12 @@
             BindingContext = this;
         }
 
+        [Obsolete]
         protected override void OnAppearing()
         {
-            if (App.SamplesInstance.LoadResult != null)
+            if (VSM.Samples.App.SamplesInstance.LoadResult != null)
             {
-                App.SamplesInstance.LoadResult.Dispose();
+                VSM.Samples.App.SamplesInstance.LoadResult.Dispose();
             }
 
             collectionList.SelectedItem = null;

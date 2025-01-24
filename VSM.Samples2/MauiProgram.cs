@@ -4,7 +4,7 @@ using CommunityToolkit.Maui;
 using Esri.ArcGISRuntime.Maui;
 using Esri.ArcGISRuntime.Toolkit.Maui;
 
-namespace VSM.Samples2
+namespace VSM.Samples
 {
     public static class MauiProgram
     {

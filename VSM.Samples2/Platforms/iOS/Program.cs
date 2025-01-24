@@ -2,7 +2,7 @@
 using UIKit;
 using VertiGIS.Mobile.Samples.iOS;
 
-namespace VSM.Samples2
+namespace VSM.Samples
 {
     public class Program
     {

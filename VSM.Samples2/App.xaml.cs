@@ -2,8 +2,9 @@
 using VertiGIS.Mobile;
 using VertiGIS.Mobile.Infrastructure.App;
 using VertiGIS.Mobile.Infrastructure.Configuration;
+using VertiGIS.Mobile.Samples.SampleSelector;
 
-namespace VSM.Samples2
+namespace VSM.Samples
 {
     public partial class App : Application
     {
@@ -15,8 +16,6 @@ namespace VSM.Samples2
             AppManager.Initialize(this);
 
             InitializeComponent();
-
-
 
             MainPage = new ContentPage()
             {
@@ -35,7 +34,7 @@ namespace VSM.Samples2
             await AppManager.Instance.InitializeAsync();
 
             // Get our sample selection page and set it as the root.
-            var selectorPage = new SampleSelector.Selector(this);
+            var selectorPage = new VertiGIS.Mobile.Samples.SampleSelector.Selector(this);
 
             MainPage = new NavigationPage(selectorPage)
             {
@@ -133,7 +132,7 @@ namespace VSM.Samples2
             }
 
             // Create our markdown description.
-            var view = new MarkdownView()
+            var view = new VertiGIS.Mobile.Toolkit.Views.Markdown.MarkdownView()
             {
                 Markdown = readmeContent,
                 LabelStyleOverrides = new Style(typeof(Label)) { Setters = { new Setter { Property = Label.TextColorProperty, Value = Colors.Black } } }

@@ -1,4 +1,4 @@
-﻿namespace VSM.Samples2
+﻿namespace VSM.Samples
 {
     public partial class MainPage : ContentPage
     {

@@ -2,7 +2,7 @@
 using Microsoft.Maui.Hosting;
 using UIKit;
 using VertiGIS.Mobile.Platforms;
-using VSM.Samples2;
+using VSM.Samples;
 
 namespace VertiGIS.Mobile.Samples.iOS;
 

@@ -3,6 +3,7 @@ using VertiGIS.Mobile.Samples.Samples.Conceptual.Internationalization;
 
 using VertiGIS.Mobile.Composition.Layout;
 using System.Xml.Linq;
+using VSM.Samples.Samples.Conceptual.Internationalization;
 
 [assembly: Component(typeof(InternationalizationComponent), "i18n", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Conceptual.Internationalization

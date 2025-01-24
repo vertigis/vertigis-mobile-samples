@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace VSM.Samples2
+namespace VSM.Samples
 {
     [Application]
     public class MainApplication : MauiApplication
