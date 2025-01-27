@@ -19,7 +19,7 @@ namespace VSM.Samples
 
             MainPage = new ContentPage()
             {
-                Content = GetContent()
+                Content = GetSpinnerContent()
             };
 
             // Register additional assemblies to search for configured assembly attributes.
@@ -75,7 +75,7 @@ namespace VSM.Samples
             {
                 await MainPage.Navigation.PushModalAsync(new ContentPage()
                 {
-                    Content = GetContent()
+                    Content = GetSpinnerContent()
                 });
             }
 
@@ -102,7 +102,7 @@ namespace VSM.Samples
             {
                 Title = sample.Name,
                 BarBackgroundColor = Colors.LightGray,
-                BarTextColor = Colors.Black
+                BarTextColor = Colors.Black,
             };
 
             var description = GetDescription(readme);
@@ -157,7 +157,7 @@ namespace VSM.Samples
             return stack;
         }
 
-        public View GetContent()
+        public View GetSpinnerContent()
         {
             // Stack
             var stack = new VerticalStackLayout
