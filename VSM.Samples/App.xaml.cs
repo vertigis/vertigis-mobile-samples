@@ -13,9 +13,9 @@ namespace VSM.Samples
 
         public App()
         {
-            AppManager.Initialize(this);
-
             InitializeComponent();
+
+            AppManager.Initialize(this);
 
             MainPage = new ContentPage()
             {
