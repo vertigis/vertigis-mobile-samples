@@ -176,7 +176,8 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0-PullRequest22521.12" ExcludeAssets="buildTransitive;build" PrivateAssets="all" />
+		<PackageReference Include="Jint" Version="4.1.0" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" ExcludeAssets="buildTransitive;build" PrivateAssets="all"/>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
