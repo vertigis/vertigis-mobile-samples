@@ -22,14 +22,14 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
+              working-directory: VSM.Samples/VSM.Samples.Android
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
               run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
+              working-directory: VSM.Samples/VSM.Samples.Android
     iOS:
-        runs-on: macos-12
+        runs-on: macos-13
         steps:
             - uses: actions/checkout@v2
 
@@ -50,12 +50,12 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.iOS
+              working-directory: VSM.Samples/VSM.Samples.iOS
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
               run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.iOS
+              working-directory: VSM.Samples/VSM.Samples.iOS
     Windows:
         runs-on: windows-latest
         steps:
@@ -71,10 +71,10 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.UWP
+              working-directory: VSM.Samples/VSM.Samples.UWP
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once XF is updated, and warnings aren't shown:
               # https://developercommunity.visualstudio.com/content/problem/1251681/xamarinforms-application-warning.html
               run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.UWP
+              working-directory: VSM.Samples/VSM.Samples.UWP
