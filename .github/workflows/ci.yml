@@ -48,6 +48,9 @@ jobs:
               run: dotnet nuget list source
               shell: bash
 
+            - name: Install .NET MAUI Workload
+              run: dotnet workload install maui
+
             - name: Restore NuGet packages
               run: msbuild -t:restore
               working-directory: VSM.Samples/VSM.Samples.iOS
