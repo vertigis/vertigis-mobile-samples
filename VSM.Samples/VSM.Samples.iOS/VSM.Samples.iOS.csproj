@@ -79,6 +79,12 @@
 	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="PrivacyInfo.xcprivacy" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="PrivacyInfo.xcprivacy" />
+	</ItemGroup>
+	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime.Maui">
 			<Version>200.5.0</Version>
 		</PackageReference>
