@@ -1,0 +1,320 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>VSM.Samples</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<MauiVersion>8.0.70</MauiVersion>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- Display name -->
+		<ApplicationTitle>VSM.Samples</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.VSM.Samples</ApplicationId>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">16.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">30.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.19041.0</TargetPlatformMinVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+	  <ProvisioningType>manual</ProvisioningType>
+	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiAsset Include="..\VSM.Samples\license.txt" LogicalName="license.txt" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\Commands\commands.json" LogicalName="commands.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\Commands\commands.xml" LogicalName="commands.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\MapAndFeatureCommands\map-and-feature-commands.json" LogicalName="map-and-feature-commands.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\MapAndFeatureCommands\map-and-feature-commands.xml" LogicalName="map-and-feature-commands.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\MapConfiguration\map-configuration.json" LogicalName="map-configuration.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\MapConfiguration\map-configuration.xml" LogicalName="map-configuration.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\Theme\theme.json" LogicalName="theme.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\AppConfiguration\Theme\theme.xml" LogicalName="theme.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\App\VSMViewer\app.json" LogicalName="app.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\App\VSMViewer\layout-large.xml" LogicalName="layout-large.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\App\VSMViewer\layout-small.xml" LogicalName="layout-small.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\ActivateDeactivateChildren\activate-deactivate-children.json" LogicalName="activate-deactivate-children.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\ActivateDeactivateChildren\activate-deactivate-children.xml" LogicalName="activate-deactivate-children.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\ActivateDeactivate\activate-deactivate.json" LogicalName="activate-deactivate.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\ActivateDeactivate\activate-deactivate.xml" LogicalName="activate-deactivate.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\DependencyInjection\dependency-injection.json" LogicalName="dependency-injection.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\DependencyInjection\dependency-injection.xml" LogicalName="dependency-injection.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Disposal\disposal.json" LogicalName="disposal.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Disposal\disposal.xml" LogicalName="disposal.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Internationalization\i18n.json" LogicalName="i18n.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Internationalization\i18n.xml" LogicalName="i18n.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Logging\logging.json" LogicalName="logging.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\Logging\logging.xml" LogicalName="logging.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\OrientationLock\orientation-lock.json" LogicalName="orientation-lock.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\OrientationLock\orientation-lock.xml" LogicalName="orientation-lock.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\desktop.xml" LogicalName="desktop.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\phone-vs-desktop.json" LogicalName="phone-vs-desktop.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Conceptual\PhoneVsDesktop\phone.xml" LogicalName="phone.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\BasemapToggle\basemap-toggle.json" LogicalName="basemap-toggle.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\BasemapToggle\basemap-toggle.xml" LogicalName="basemap-toggle.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\BreadCrumbs\bread-crumbs.json" LogicalName="bread-crumbs.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\BreadCrumbs\bread-crumbs.xml" LogicalName="bread-crumbs.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\CustomDetails\custom-details.json" LogicalName="custom-details.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\CustomDetails\custom-details.xml" LogicalName="custom-details.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\Location\location.json" LogicalName="location.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\CustomSamples\Location\location.xml" LogicalName="location.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\ComponentConfiguration\component-configuration.json" LogicalName="component-configuration.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\ComponentConfiguration\component-configuration.xml" LogicalName="component-configuration.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Component\component.json" LogicalName="component.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Component\component.xml" LogicalName="component.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Operation\operation.json" LogicalName="operation.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Operation\operation.xml" LogicalName="operation.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Service\service.json" LogicalName="service.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\Service\service.xml" LogicalName="service.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\VSMElements\vsm-elements.json" LogicalName="vsm-elements.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\VSMElements\vsm-elements.xml" LogicalName="vsm-elements.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\XamlComponent\xaml-component.json" LogicalName="xaml-component.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Custom\XamlComponent\xaml-component.xml" LogicalName="xaml-component.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\ButtonStyles\button-styles.json" LogicalName="button-styles.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\ButtonStyles\button-styles.xml" LogicalName="button-styles.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Dialog\dialog.json" LogicalName="dialog.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Dialog\dialog.xml" LogicalName="dialog.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\HierarchicalPanelNavigation\hierarchical-panel-navigation.json" LogicalName="hierarchical-panel-navigation.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\HierarchicalPanelNavigation\hierarchical-panel-navigation.xml" LogicalName="hierarchical-panel-navigation.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\LayoutProperties\layout-properties.json" LogicalName="layout-properties.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\LayoutProperties\layout-properties.xml" LogicalName="layout-properties.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\MapPanel\map-panel.json" LogicalName="map-panel.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\MapPanel\map-panel.xml" LogicalName="map-panel.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\MapSearch\map-search.json" LogicalName="map-search.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\MapSearch\map-search.xml" LogicalName="map-search.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Split\split.json" LogicalName="split.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Split\split.xml" LogicalName="split.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Stack\stack.json" LogicalName="stack.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Stack\stack.xml" LogicalName="stack.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Taskbar\taskbar.json" LogicalName="taskbar.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Layout\Taskbar\taskbar.xml" LogicalName="taskbar.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity-workflow.json" LogicalName="custom-activity-workflow.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity.json" LogicalName="custom-activity.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomActivity\custom-activity.xml" LogicalName="custom-activity.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component-workflow.json" LogicalName="custom-form-component-workflow.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component.json" LogicalName="custom-form-component.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\CustomFormComponent\custom-form-component.xml" LogicalName="custom-form-component.xml" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\RunWorkflow\run-workflow.json" LogicalName="run-workflow.json" />
+		<MauiAsset Include="..\VSM.Samples\Samples\Workflow\RunWorkflow\run-workflow.xml" LogicalName="run-workflow.xml" />
+		<MauiAsset Include="Platforms\Windows\Assets\NLog.config" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Samples\AppConfiguration\Commands\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\AppConfiguration\MapAndFeatureCommands\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\AppConfiguration\MapConfiguration\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\AppConfiguration\Theme\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\App\VSMViewer\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\ActivateDeactivateChildren\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\ActivateDeactivate\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\DependencyInjection\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\Disposal\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\Internationalization\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\Logging\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\OrientationLock\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Conceptual\PhoneVsDesktop\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\CustomSamples\BasemapToggle\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\CustomSamples\BreadCrumbs\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\CustomSamples\CustomDetails\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\CustomSamples\Location\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\ComponentConfiguration\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\Component\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\Operation\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\Service\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\VSMElements\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Custom\XamlComponent\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\ButtonStyles\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\Dialog\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\HierarchicalPanelNavigation\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\LayoutProperties\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\MapPanel\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\MapSearch\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\Split\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\Stack\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Layout\Taskbar\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Workflow\CustomActivity\custom-activity-workflow.json" />
+		<EmbeddedResource Include="Samples\Workflow\CustomActivity\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Workflow\CustomFormComponent\custom-form-component-workflow.json" />
+		<EmbeddedResource Include="Samples\Workflow\CustomFormComponent\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Samples\Workflow\RunWorkflow\README.md">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<MauiAsset Include="Platforms\Windows\Assets\*">
+			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiAsset>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Jint" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="AppResources.Designer.cs">
+			<DependentUpon>AppResources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="SampleSelector\Selector.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\Conceptual\Internationalization\AppResources.Designer.cs">
+			<DependentUpon>AppResources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+		</Compile>
+		<Compile Update="Samples\CustomSamples\BasemapToggle\BasemapToggleView.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\CustomSamples\BreadCrumbs\BreadcrumbLocationTrackerView.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\CustomSamples\CustomDetails\CustomDetailsView.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\Custom\VSMElements\VSMElementsXamlView.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\Custom\XamlComponent\XamlComponentView.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Samples\Workflow\CustomFormComponent\CustomFormComponent.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="AppResources.resx">
+			<LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Samples\Conceptual\Internationalization\AppResources.en-US.resx">
+			<Generator>
+			</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Samples\Conceptual\Internationalization\AppResources.resx">
+			<LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
+		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+</Project>

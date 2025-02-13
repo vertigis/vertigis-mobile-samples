@@ -22,12 +22,12 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: VSM.Samples/VSM.Samples.Android
+              working-directory: VSM.Samples
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
               run: msbuild
-              working-directory: VSM.Samples/VSM.Samples.Android
+              working-directory: VSM.Samples
     iOS:
         runs-on: macos-15
         steps:
@@ -44,7 +44,7 @@ jobs:
 
             - name: Build
               run: dotnet publish -f net8.0-ios /p:EnableCodeSigning=false
-              working-directory: VSM.Samples/VSM.Samples.iOS
+              working-directory: VSM.Samples
     Windows:
         runs-on: windows-latest
         steps:
@@ -56,8 +56,8 @@ jobs:
             - name: "Update windows SDK"
               uses: fbactions/setup-winsdk@v1
               with:
-                winsdk-build-version: 18362
+                winsdk-build-version: 19041
 
             - name: Build
               run: dotnet publish -f net8.0-windows10.0.19041.0
-              working-directory: VSM.Samples/VSM.Samples.UWP
+              working-directory: VSM.Samples
