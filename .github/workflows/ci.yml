@@ -22,14 +22,14 @@ jobs:
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
+              working-directory: VSM.Samples/VSM.Samples.Android
 
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
               run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.Android
+              working-directory: VSM.Samples/VSM.Samples.Android
     iOS:
-        runs-on: macos-12
+        runs-on: macos-15
         steps:
             - uses: actions/checkout@v2
 
@@ -39,23 +39,12 @@ jobs:
               with:
                   xcode-version: latest
 
-            # The following two workaround steps can be removed when the following github issue is resolved: https://github.com/actions/virtual-environments/issues/5768
-            - name: Restore Workaround Remove
-              run: rm -rf ~/.config/NuGet/NuGet.Config
-              shell: bash
+            - name: Install .NET MAUI Workload
+              run: dotnet workload install maui
 
-            - name: Restore Workaround List
-              run: dotnet nuget list source
-              shell: bash
-
-            - name: Restore NuGet packages
-              run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.iOS
-
-            - name: msbuild
-              # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
-              run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.iOS
+            - name: Build
+              run: dotnet publish -f net8.0-ios /p:EnableCodeSigning=false
+              working-directory: VSM.Samples/VSM.Samples.iOS
     Windows:
         runs-on: windows-latest
         steps:
@@ -69,12 +58,6 @@ jobs:
               with:
                 winsdk-build-version: 18362
 
-            - name: Restore NuGet packages
-              run: msbuild -t:restore
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.UWP
-
-            - name: msbuild
-              # TODO: Enable `-warnAsError` flag once XF is updated, and warnings aren't shown:
-              # https://developercommunity.visualstudio.com/content/problem/1251681/xamarinforms-application-warning.html
-              run: msbuild
-              working-directory: Geocortex.Mobile.Samples/Geocortex.Mobile.Samples.UWP
+            - name: Build
+              run: dotnet publish -f net8.0-windows10.0.19041.0
+              working-directory: VSM.Samples/VSM.Samples.UWP
