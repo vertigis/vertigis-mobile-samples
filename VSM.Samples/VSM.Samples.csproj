@@ -247,6 +247,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Jint" Version="4.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 	</ItemGroup>
 
@@ -309,7 +310,7 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.5.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.5.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0-PullRequest22787.157" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.34.0.284" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
