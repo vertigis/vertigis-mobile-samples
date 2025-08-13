@@ -37,7 +37,7 @@ jobs:
             - name: Use Latest Xcode
               uses: maxim-lobanov/setup-xamarin@v1
               with:
-                  xcode-version: latest
+                  xcode-version: '16.x'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui
