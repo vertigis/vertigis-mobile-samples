@@ -37,13 +37,13 @@ jobs:
             - name: Use Latest Xcode
               uses: maxim-lobanov/setup-xamarin@v1
               with:
-                  xcode-version: '16.x'
+                  xcode-version: '26.0.1'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui
 
             - name: Build
-              run: dotnet publish -f net8.0-ios /p:EnableCodeSigning=false
+              run: dotnet publish -f net9.0-ios /p:EnableCodeSigning=false
               working-directory: VSM.Samples
     Windows:
         runs-on: windows-latest
@@ -59,5 +59,5 @@ jobs:
                 winsdk-build-version: 19041
 
             - name: Build
-              run: dotnet publish -f net8.0-windows10.0.19041.0
+              run: dotnet publish -f net9.0-windows10.0.19041.0
               working-directory: VSM.Samples
