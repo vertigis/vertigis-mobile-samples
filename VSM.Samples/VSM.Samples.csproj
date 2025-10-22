@@ -29,6 +29,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net9.0-ios'">
+	  <SkipStaticLibraryValidation>warn</SkipStaticLibraryValidation>
 	  <ProvisioningType>manual</ProvisioningType>
 	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
 	</PropertyGroup>
@@ -305,7 +306,7 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.7.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.7.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.38.0.237" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.38.1.292" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
