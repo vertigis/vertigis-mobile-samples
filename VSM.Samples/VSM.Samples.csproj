@@ -7,7 +7,7 @@
 		<OutputType>Exe</OutputType>
 		<RootNamespace>VSM.Samples</RootNamespace>
 		<UseMaui>true</UseMaui>
-		<MauiVersion>9.0.90</MauiVersion>
+		<MauiVersion>9.0.100</MauiVersion>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -306,7 +306,7 @@
 	<ItemGroup>
 		<PackageReference Include="Esri.ArcGISRuntime" Version="200.7.0" />
 		<PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.7.0" />
-		<PackageReference Include="VertiGIS.Mobile" Version="5.38.1.292" />
+		<PackageReference Include="VertiGIS.Mobile" Version="5.39.0.215" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
