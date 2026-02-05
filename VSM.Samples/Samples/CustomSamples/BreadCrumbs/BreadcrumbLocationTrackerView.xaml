@@ -7,7 +7,7 @@
         <Style x:Key="BreadcrumbButton" TargetType="ui:EnhancedButton" BasedOn="{StaticResource MapWidgetButton}">
             <Setter Property="HeightRequest" Value="44"/>
             <Setter Property="CornerRadius" Value="0"/>
-            <Setter Property="BorderWidth" Value="0"/>
+            <Setter Property="StrokeThickness" Value="0"/>
 
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
