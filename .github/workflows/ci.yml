@@ -16,6 +16,7 @@ jobs:
               with:
                   distribution: 'microsoft'
                   java-version: '11'
+                  dotnet-version: '9.0.311'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui@9.0.120
@@ -33,6 +34,7 @@ jobs:
               uses: maxim-lobanov/setup-xamarin@v1
               with:
                   xcode-version: '26.0.1'
+                  dotnet-version: '9.0.311'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui@9.0.120
@@ -48,7 +50,8 @@ jobs:
             - name: "Update windows SDK"
               uses: fbactions/setup-winsdk@v1
               with:
-                winsdk-build-version: 19041
+                winsdk-build-version: '19041'
+                dotnet-version: '9.0.311'
 
             - name: Install .NET MAUI Workload
               run: dotnet workload install maui@9.0.120
