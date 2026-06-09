@@ -16,7 +16,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.Service
             this.ServiceOperation.UpdateUI.RegisterExecute(
                 (args) =>
                 {
-                    Application.Current.MainPage.DisplayAlert("Service Alert", "This is an service alert message.", "OK");
+                    Application.Current?.Windows.FirstOrDefault()?.Page?.DisplayAlert("Service Alert", "This is an service alert message.", "OK");
                     return Task.FromResult((object)null);
                 }, this);
 

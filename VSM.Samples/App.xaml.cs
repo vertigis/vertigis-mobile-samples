@@ -9,6 +9,7 @@ namespace VSM.Samples
     public partial class App : Application
     {
         public static App SamplesInstance;
+
         public LoadAppResult LoadResult;
 
         public App()
@@ -17,15 +18,18 @@ namespace VSM.Samples
 
             AppManager.Initialize(this);
 
-            MainPage = new ContentPage()
-            {
-                Content = GetSpinnerContent()
-            };
-
             // Register additional assemblies to search for configured assembly attributes.
             AppManager.Instance.AssemblyManager.RegisterAssemblies(this.GetType().Assembly);
 
             SamplesInstance = this;
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new ContentPage()
+            {
+                Content = GetSpinnerContent()
+            });
         }
 
         protected override async void OnStart()
@@ -34,9 +38,9 @@ namespace VSM.Samples
             await AppManager.Instance.InitializeAsync();
 
             // Get our sample selection page and set it as the root.
-            var selectorPage = new VertiGIS.Mobile.Samples.SampleSelector.Selector(this);
+            var selectorPage = new Selector(this);
 
-            MainPage = new NavigationPage(selectorPage)
+            Current.Windows[0].Page = new NavigationPage(selectorPage)
             {
                 Title = "VertiGIS Studio Mobile SDK Samples",
             };
@@ -73,7 +77,7 @@ namespace VSM.Samples
             // Push a loading spinner.
             if (DeviceInfo.Platform != DevicePlatform.iOS)
             {
-                await MainPage.Navigation.PushModalAsync(new ContentPage()
+                await Current?.Windows.FirstOrDefault()?.Page?.Navigation.PushModalAsync(new ContentPage()
                 {
                     Content = GetSpinnerContent()
                 });
@@ -110,30 +114,28 @@ namespace VSM.Samples
             tabbedPage.Children.Add(LoadResult.Page);
             tabbedPage.Children.Add(new ContentPage { Content = description, Title = "Description", IconImageSource = "description.png" });
 
-            await MainPage.Navigation.PushAsync(tabbedPage, false);
+            await Current?.Windows.FirstOrDefault()?.Page?.Navigation.PushAsync(tabbedPage, false);
 
             // Pop the loading spinner.
             if (DeviceInfo.Platform != DevicePlatform.iOS)
             {
-                await MainPage.Navigation.PopModalAsync();
+                await Current?.Windows.FirstOrDefault()?.Page?.Navigation.PopModalAsync();
             }
         }
 
-        public View GetDescription(string resource)
+        public static View GetDescription(string resource)
         {
             // Get our markdown content.
             string readmeContent;
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource))
             {
-                if(stream == null)
+                if (stream == null)
                 {
                     throw new ArgumentException($"Unable to find resource for ${resource}");
                 }
 
-                using (StreamReader reader = new StreamReader(stream))
-                {
-                    readmeContent = reader.ReadToEnd();
-                }
+                using StreamReader reader = new(stream);
+                readmeContent = reader.ReadToEnd();
             }
 
             // Create our markdown description.
@@ -168,12 +170,12 @@ namespace VSM.Samples
             };
 
             // Spinner
-            var spinner = new ActivityIndicator()
+            var spinner = new ActivityIndicator
             {
-                IsRunning = true
+                IsRunning = true,
+                WidthRequest = 75,
+                HeightRequest = 75
             };
-            spinner.WidthRequest = 75;
-            spinner.HeightRequest = 75;
             stack.Children.Add(spinner);
 
             // Label

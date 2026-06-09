@@ -5,7 +5,7 @@
     {
         private readonly VSM.Samples.App _app;
 
-        public List<SampleGroup> Samples { get; private set; } = new List<SampleGroup>();
+        public List<SampleGroup> Samples { get; private set; } = [];
 
         public Selector(VSM.Samples.App app)
         {
@@ -16,13 +16,9 @@
             BindingContext = this;
         }
 
-        [Obsolete]
         protected override void OnAppearing()
         {
-            if (VSM.Samples.App.SamplesInstance.LoadResult != null)
-            {
-                VSM.Samples.App.SamplesInstance.LoadResult.Dispose();
-            }
+            VSM.Samples.App.SamplesInstance.LoadResult?.Dispose();
 
             collectionList.SelectedItem = null;
 
@@ -41,38 +37,34 @@
 
         private void InitializeSamples()
         {
-            Samples.Add(new SampleGroup("App Samples", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("App Samples",
+            [
+                new() {
                     Name = "VertiGIS Studio Mobile App",
                     App = "app.json",
                     Layout = null,
                     Description = "A VertiGIS Studio Mobile app with common components and configurations.",
                     PathFragment = "App.VSMViewer"
                 },
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("Layout", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("Layout",
+            [
+                new() {
                     Name = "Stack",
                     App = "stack.json",
                     Layout = "stack.xml",
                     Description = "Using a stack component.",
                     PathFragment = "Layout.Stack"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Split",
                     App = "split.json",
                     Layout = "split.xml",
                     Description = "Using a split component.",
                     PathFragment = "Layout.Split"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Map Panel",
                     App = "map-panel.json",
                     Layout = "map-panel.xml",
@@ -87,32 +79,28 @@
                 //    Description = "A persistent search and results layout.",
                 //    PathFragment = "Layout.MapSearch"
                 //},
-                new Sample
-                {
+                new() {
                     Name = "Button Styles",
                     App = "button-styles.json",
                     Layout = "button-styles.xml",
                     Description = "Demonstrates button styling.",
                     PathFragment = "Layout.ButtonStyles"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Hierarchical Panel Navigation",
                     App = "hierarchical-panel-navigation.json",
                     Layout = "hierarchical-panel-navigation.xml",
                     Description = "Navigates between panels in a hierarchy.",
                     PathFragment = "Layout.HierarchicalPanelNavigation"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Taskbar",
                     App = "taskbar.json",
                     Layout = "taskbar.xml",
                     Description = "Demonstrates the configuration of taskbar items.",
                     PathFragment = "Layout.Taskbar"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Layout Properties",
                     App = "layout-properties.json",
                     Layout = "layout-properties.xml",
@@ -120,28 +108,25 @@
                     PathFragment = "Layout.LayoutProperties",
                     Platform = "*Best viewed on Windows devices."
                 },
-                new Sample
-                {
+                new() {
                     Name = "Dialog Component",
                     App = "dialog.json",
                     Layout = "dialog.xml",
                     Description = "Demonstrates activation of the dialog component.",
                     PathFragment = "Layout.Dialog"
                 }
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("App Configuration", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("App Configuration",
+            [
+                new() {
                     Name = "Map Configuration",
                     App = "map-configuration.json",
                     Layout = "map-configuration.xml",
                     Description = "Demonstrates the configuration of a map component.",
                     PathFragment = "AppConfiguration.MapConfiguration"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Commands",
                     App = "commands.json",
                     Layout = "commands.xml",
@@ -149,8 +134,7 @@
                     PathFragment = "AppConfiguration.Commands",
                     Platform = "*Best viewed on Windows devices."
                 },
-                new Sample
-                {
+                new() {
                     Name = "Map and Feature Commands",
                     App = "map-and-feature-commands.json",
                     Layout = "map-and-feature-commands.xml",
@@ -158,60 +142,53 @@
                     PathFragment = "AppConfiguration.MapAndFeatureCommands",
                     Platform = "*Best viewed on Windows devices."
                 },
-                new Sample
-                {
+                new() {
                     Name = "Theme",
                     App = "theme.json",
                     Layout = "theme.xml",
                     Description = "Demonstrates using VertiGIS Studio branding.",
                     PathFragment = "AppConfiguration.Theme"
                 }
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("Custom", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("Custom",
+            [
+                new() {
                     Name = "Component",
                     App = "component.json",
                     Layout = "component.xml",
                     Description = "Getting started with custom components.",
                     PathFragment = "Custom.Component"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Component Configuration",
                     App = "component-configuration.json",
                     Layout = "component-configuration.xml",
                     Description = "Getting started with custom components that take app item configuration.",
                     PathFragment = "Custom.ComponentConfiguration"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Operation",
                     App = "operation.json",
                     Layout = "operation.xml",
                     Description = "Getting started with custom operations.",
                     PathFragment = "Custom.Operation"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Service",
                     App = "service.json",
                     Layout = "service.xml",
                     Description = "Getting started with custom services.",
                     PathFragment = "Custom.Service"
                 },
-                new Sample
-                {
+                new() {
                     Name = "XAML Component",
                     App = "xaml-component.json",
                     Layout = "xaml-component.xml",
                     Description = "Getting started with a custom component using a XAML view.",
                     PathFragment = "Custom.XamlComponent"
                 },
-                new Sample
-                {
+                new() {
                     Name = "VertiGIS Studio Mobile Elements",
                     App = "vsm-elements.json",
                     Layout = "vsm-elements.xml",
@@ -226,96 +203,85 @@
                 //    Description = "An introduction to using VertiGIS Studio Mobile styles.",
                 //    PathFragment = "Custom.VSMStyles"
                 //},
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("Custom Samples", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("Custom Samples",
+            [
+                new() {
                     Name = "Basemap Toggle",
                     App = "basemap-toggle.json",
                     Layout = "basemap-toggle.xml",
                     Description = "Toggles the basemap and its visibility.",
                     PathFragment = "CustomSamples.BasemapToggle"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Bread Crumbs",
                     App = "bread-crumbs.json",
                     Layout = "bread-crumbs.xml",
                     Description = "A location service that draws 'bread crumbs' on the map.",
                     PathFragment = "CustomSamples.BreadCrumbs"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Custom Details",
                     App = "custom-details.json",
                     Layout = "custom-details.xml",
                     Description = "An operation to display content after an 'identify' action.",
                     PathFragment = "CustomSamples.CustomDetails"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Location - Platform API",
                     App = "location.json",
                     Layout = "location.xml",
                     Description = "Gets the user's location using platform specific APIs.",
                     PathFragment = "CustomSamples.Location"
                 }
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("Conceptual", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("Conceptual",
+            [
+                new() {
                     Name = "Activate and Deactivate",
                     App = "activate-deactivate.json",
                     Layout = "activate-deactivate.xml",
                     Description = "How to take some action when a component is activated or deactivated.",
                     PathFragment = "Conceptual.ActivateDeactivate"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Activate and Deactivate Children",
                     App = "activate-deactivate-children.json",
                     Layout = "activate-deactivate-children.xml",
                     Description = "How to manage the activation and deactivation of child components.",
                     PathFragment = "Conceptual.ActivateDeactivateChildren"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Dependency Injection",
                     App = "dependency-injection.json",
                     Layout = "dependency-injection.xml",
                     Description = "An introduction to using dependency injection in VertiGIS Studio Mobile.",
                     PathFragment = "Conceptual.DependencyInjection"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Disposal",
                     App = "disposal.json",
                     Layout = "disposal.xml",
                     Description = "Cleans up after the component by using disposal.",
                     PathFragment = "Conceptual.Disposal"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Internationalization",
                     App = "i18n.json",
                     Layout = "i18n.xml",
                     Description = "Using internationalization to support language strings.",
                     PathFragment = "Conceptual.Internationalization"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Logging",
                     App = "logging.json",
                     Layout = "logging.xml",
                     Description = "Using logging in a VertiGIS Studio Mobile app.",
                     PathFragment = "Conceptual.Logging"
                 },
-                 new Sample
-                {
+                 new() {
                     Name = "Orientation Lock",
                     App = "orientation-lock.json",
                     Layout = "orientation-lock.xml",
@@ -323,8 +289,7 @@
                     PathFragment = "Conceptual.OrientationLock",
                     Platform = "*Best viewed on Android/iOS devices."
                 },
-                new Sample
-                {
+                new() {
                     Name = "Phone vs. Desktop",
                     App = "phone-vs-desktop.json",
                     Layout = null,
@@ -332,35 +297,32 @@
                     PathFragment = "Conceptual.PhoneVsDesktop",
                     Platform = "*Best viewed on Android/iOS phone devices."
                 }
-            }));
+            ]));
 
-            Samples.Add(new SampleGroup("VertiGIS Studio Workflow", new List<Sample>
-            {
-                new Sample
-                {
+            Samples.Add(new SampleGroup("VertiGIS Studio Workflow",
+            [
+                new() {
                     Name = "Run Workflow",
                     App = "run-workflow.json",
                     Layout = "run-workflow.xml",
                     Description = "Running a VertiGIS Studio Workflow.",
                     PathFragment = "Workflow.RunWorkflow"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Custom Workflow Activity",
                     App = "custom-activity.json",
                     Layout = "custom-activity.xml",
                     Description = "Getting started with custom VertiGIS Studio Workflow activities.",
                     PathFragment = "Workflow.CustomActivity"
                 },
-                new Sample
-                {
+                new() {
                     Name = "Custom Workflow Component",
                     App = "custom-form-component.json",
                     Layout = "custom-form-component.xml",
                     Description = "Getting started with custom VertiGIS Studio Workflow components.",
                     PathFragment = "Workflow.CustomFormComponent"
                 }
-            }));
+            ]));
         }
     }
 }

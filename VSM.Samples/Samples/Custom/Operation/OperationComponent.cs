@@ -37,25 +37,20 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation
         {
             if (args != null && !string.IsNullOrEmpty(args.Arguments))
             {
-                Application.Current.MainPage.DisplayAlert("Operation Alert", args.Arguments, "OK");
+                Application.Current?.Windows.FirstOrDefault()?.Page?.DisplayAlert("Operation Alert", args.Arguments, "OK");
             }
             else
             {
-                Application.Current.MainPage.DisplayAlert("Operation Alert", "This is an operation alert message.", "OK"); ;
+                Application.Current?.Windows.FirstOrDefault()?.Page?.DisplayAlert("Operation Alert", "This is an operation alert message.", "OK");
             }
 
             return Task.CompletedTask;
         }
     }
 
-    public class OperationArgs : EventArgsBase
+    public class OperationArgs(string args) : EventArgsBase
     {
         [JsonProperty("arguments")]
-        public string Arguments { get; set; }
-
-        public OperationArgs(string args)
-        {
-            Arguments = args;
-        }
+        public string Arguments { get; set; } = args;
     }
 }

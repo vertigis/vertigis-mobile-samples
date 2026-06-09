@@ -28,12 +28,12 @@ namespace VertiGIS.Mobile.Samples.Samples.Conceptual.ActivateDeactivate
 
         protected override async Task ActivatedAsync()
         {
-            await Application.Current.MainPage.DisplayAlert("Activated Alert", "This alert is shown when the component is activated.", "OK");
+            await Application.Current?.Windows.FirstOrDefault()?.Page?.DisplayAlert("Activated Alert", "This alert is shown when the component is activated.", "OK");
         }
 
         protected override async Task DeactivatedAsync()
         {
-            await Application.Current.MainPage.DisplayAlert("Deactivated Alert", "This alert is shown when the component is deactivated.", "OK");
+            await Application.Current?.Windows.FirstOrDefault()?.Page?.DisplayAlert("Deactivated Alert", "This alert is shown when the component is deactivated.", "OK");
         }
     }
 }
