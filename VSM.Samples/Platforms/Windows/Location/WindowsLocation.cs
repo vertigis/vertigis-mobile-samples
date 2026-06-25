@@ -38,7 +38,7 @@ namespace VertiGIS.Mobile.Samples.UWP.Location
 
         private void PositionChanged(object sender, PositionChangedEventArgs e)
         {
-            LocationEventArgs args = new LocationEventArgs
+            LocationEventArgs args = new()
             {
                 Latitude = e.Position.Coordinate.Point.Position.Latitude,
                 Longitude = e.Position.Coordinate.Point.Position.Longitude

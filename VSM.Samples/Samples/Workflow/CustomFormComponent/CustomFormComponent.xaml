@@ -3,6 +3,8 @@
                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                        xmlns:core="clr-namespace:VertiGIS.Mobile.Workflow.Core;assembly=VertiGIS.Mobile.Workflow"
                        xmlns:views="clr-namespace:VertiGIS.Mobile.Toolkit.Views;assembly=VertiGIS.Mobile.Toolkit"
+                       xmlns:local="clr-namespace:VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent"
+                       x:DataType="local:CustomFormComponent"
                        x:Class="VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent.CustomFormComponent">
     <ContentView.Content>
         <ActivityIndicator Color="LightGreen" IsEnabled="{Binding IsEnabled}" IsRunning="True" HeightRequest="75" WidthRequest="75" Margin="10"/>

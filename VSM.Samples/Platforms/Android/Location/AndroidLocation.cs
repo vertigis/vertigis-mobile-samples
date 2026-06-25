@@ -10,7 +10,7 @@ using AOSBundle = Android.OS.Bundle;
 /* NOTE: This sample component is for demonstrative purposes only.
  * This is not the recommended pattern for accessing location in a VertiGIS Studio Mobile application.
  * This component is used to demonstrate platform specific implementations and api/method calls. */
-[assembly: Microsoft.Maui.Controls.Dependency(typeof(AndroidLocation))]
+[assembly: Dependency(typeof(AndroidLocation))]
 namespace VertiGIS.Mobile.Samples.Droid.Location
 {
     public class AndroidLocation : Java.Lang.Object, ILocation, ILocationListener
@@ -27,7 +27,7 @@ namespace VertiGIS.Mobile.Samples.Droid.Location
         {
             if (location != null)
             {
-                LocationEventArgs args = new LocationEventArgs
+                LocationEventArgs args = new()
                 {
                     Latitude = location.Latitude,
                     Longitude = location.Longitude

@@ -12,7 +12,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Workflow.CustomFormComponent
         /// <summary>
         /// Gets a mapping of action names to implementations of <see cref="IActivityHandler"/>s.
         /// </summary>
-        private Dictionary<string, Func<IActivityHandler>> RegisteredActivities { get; } = new Dictionary<string, Func<IActivityHandler>>();
+        private Dictionary<string, Func<IActivityHandler>> RegisteredActivities { get; } = [];
 
         public FormLoader()
         {
