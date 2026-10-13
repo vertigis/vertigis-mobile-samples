@@ -3,8 +3,8 @@ using VertiGIS.Mobile.Samples.Samples.Custom.Operation;
 using VertiGIS.Mobile.Composition.Layout;
 using VertiGIS.Mobile.Composition.Messaging;
 using VertiGIS.Mobile.Toolkit.Messaging;
+using System.Text.Json.Serialization;
 using System.Xml.Linq;
-using Newtonsoft.Json;
 
 [assembly: Component(typeof(OperationComponent), "operation", XmlNamespace = XmlNamespaces.SamplesNamespace)]
 namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation
@@ -50,7 +50,7 @@ namespace VertiGIS.Mobile.Samples.Samples.Custom.Operation
 
     public class OperationArgs(string args) : EventArgsBase
     {
-        [JsonProperty("arguments")]
+        [JsonPropertyName("arguments")]
         public string Arguments { get; set; } = args;
     }
 }
